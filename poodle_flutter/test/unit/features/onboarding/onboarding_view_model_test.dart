@@ -1,7 +1,21 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:poodle_flutter/features/onboarding/onboarding_story.dart';
 import 'package:poodle_flutter/features/onboarding/presentation/view_models/onboarding_view_model.dart';
 
 void main() {
+  final storyCount = OnboardingStory.values.length;
+  final lastIndex = storyCount - 1;
+
+  test('tour presents the five supported features in order', () {
+    expect(OnboardingStory.values, [
+      OnboardingStory.courses,
+      OnboardingStory.materials,
+      OnboardingStory.notebook,
+      OnboardingStory.sources,
+      OnboardingStory.planning,
+    ]);
+  });
+
   testWidgets(
     'backward input at an automatic boundary cannot transition twice',
     (tester) async {
@@ -30,13 +44,18 @@ void main() {
       now += const Duration(seconds: 1);
       await tester.pump(const Duration(seconds: 1));
       expect(model.state.index, 1);
-      for (var i = 0; i < 9; i++) {
+      for (var i = 0; i < storyCount - 1; i++) {
         now += const Duration(seconds: 8);
         await tester.pump(const Duration(seconds: 8));
       }
-      expect(model.state.index, 9);
+      expect(model.state.index, lastIndex);
       expect(model.progress, 1);
       expect(model.state.paused, isTrue);
+      expect(model.isLast, isTrue);
+      now += const Duration(minutes: 1);
+      await tester.pump(const Duration(minutes: 1));
+      expect(model.state.index, lastIndex);
+      expect(model.progress, 1);
       model.dispose();
     },
   );
@@ -72,12 +91,12 @@ void main() {
       expect(model.state.index, 1);
       expect(model.progress, 0);
       model.previous();
-      for (var i = 0; i < 20; i++) {
+      for (var i = 0; i < storyCount + 2; i++) {
         model.next();
       }
-      expect(model.state.index, 9);
+      expect(model.state.index, lastIndex);
       model.previous();
-      expect(model.state.index, 8);
+      expect(model.state.index, lastIndex - 1);
       model.dispose();
     },
   );

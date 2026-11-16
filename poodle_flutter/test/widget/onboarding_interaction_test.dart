@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
+import 'package:poodle_flutter/features/onboarding/onboarding_story.dart';
 import 'package:poodle_flutter/features/onboarding/presentation/view_models/onboarding_view_model.dart';
 import 'package:poodle_flutter/features/onboarding/presentation/views/onboarding_screen.dart';
 import '../support/test_app.dart';
@@ -106,7 +107,10 @@ void main() {
       await tester.pumpWidget(tour(model, locale: const Locale('uk')));
       await tester.pumpAndSettle();
       expect(model.state.index, 2);
-      expect(find.text('Історія 3 з 10'), findsOneWidget);
+      expect(
+        find.text('Історія 3 з ${OnboardingStory.values.length}'),
+        findsOneWidget,
+      );
       model.togglePlayback();
       await tester.pump();
       final context = tester.element(find.byType(OnboardingScreen));
@@ -143,7 +147,12 @@ void main() {
       await tester.pump();
       final story = find.byKey(const ValueKey('story-courses'));
       final initial = tester.getSemantics(story).label;
-      expect(initial, contains('Story 1 of 10. Your learning, in one place.'));
+      expect(
+        initial,
+        contains(
+          'Story 1 of ${OnboardingStory.values.length}. Your learning, in one place.',
+        ),
+      );
       now += const Duration(seconds: 2);
       await tester.pump(const Duration(seconds: 2));
       expect(tester.getSemantics(story).label, initial);

@@ -13,7 +13,7 @@ void main() {
   for (final variant in [
     (index: 0, locale: const Locale('en')),
     (index: 2, locale: const Locale('uk')),
-    (index: 9, locale: const Locale('en')),
+    (index: OnboardingStory.values.length - 1, locale: const Locale('en')),
   ]) {
     testWidgets('onboarding visual ${variant.index} ${variant.locale}', (
       tester,
@@ -61,7 +61,7 @@ void main() {
     (size: const Size(768, 1024), scale: 2.0, locale: const Locale('uk')),
   ]) {
     testWidgets(
-      'all ten stories fit ${variant.size} ${variant.scale}x ${variant.locale}',
+      'all onboarding stories fit ${variant.size} ${variant.scale}x ${variant.locale}',
       (tester) async {
         tester.view.physicalSize = variant.size;
         tester.view.devicePixelRatio = 1;
@@ -85,6 +85,7 @@ void main() {
         );
         for (var i = 0; i < OnboardingStory.values.length; i++) {
           await tester.pumpAndSettle();
+          expect(model.state.index, i);
           expect(
             tester.takeException(),
             isNull,
@@ -92,7 +93,7 @@ void main() {
           );
           expect(
             find.text(
-              i == 9
+              i == OnboardingStory.values.length - 1
                   ? (variant.locale.languageCode == 'uk'
                         ? 'Почати'
                         : 'Get started')
