@@ -13,7 +13,7 @@ import 'package:poodle_flutter/data/repositories/student_tasks_repository.dart';
 import 'package:poodle_flutter/features/tasks/presentation/views/student_tasks_screen.dart';
 
 void main() {
-  testWidgets('Home Tasks opens the student deadline list', (tester) async {
+  testWidgets('Tasks in More opens the student deadline list', (tester) async {
     final auth = FakeAuthRepository(
       latency: Duration.zero,
       restoredSession: const AuthSession('student@example.com'),
@@ -35,9 +35,11 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    await tester.ensureVisible(find.text('Tasks'));
+    await tester.tap(find.text('More').last);
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Tasks'));
+    await tester.ensureVisible(find.text('Tasks').last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Tasks').last);
     await tester.pumpAndSettle();
     expect(find.text('Due exactly now'), findsOneWidget);
   });

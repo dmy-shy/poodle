@@ -45,9 +45,12 @@ void main() {
       );
       await tester.pumpAndSettle();
       expect(find.text('olena@example.test'), findsOneWidget);
-      expect(find.text('IT coordinator'), findsOneWidget);
+      expect(find.text('Position: IT coordinator'), findsOneWidget);
+      final note = find.byKey(const ValueKey('review-note-one'));
+      await tester.ensureVisible(note);
+      await tester.pumpAndSettle();
       await tester.enterText(
-        find.byKey(const ValueKey('review-note-one')),
+        note,
         'Cannot verify university authority',
       );
       await tester.ensureVisible(find.text('Reject request'));

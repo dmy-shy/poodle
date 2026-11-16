@@ -22,7 +22,8 @@ void main() {
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
-      final model = OnboardingViewModel()..setPaused(PauseReason.manual, true);
+      final model = OnboardingViewModel(now: () => Duration.zero)
+        ..setPaused(PauseReason.manual, true);
       for (var i = 0; i < variant.index; i++) {
         model.next();
       }

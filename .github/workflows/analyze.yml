@@ -15,13 +15,13 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.44.4'
+          flutter-version-file: .fvmrc
 
       - name: Install dependencies
-        run: flutter pub get
+        run: flutter pub get --enforce-lockfile
 
       - name: Analyze
-        run: dart analyze --fatal-infos
+        run: dart analyze --fatal-infos poodle_client poodle_flutter poodle_server poodle_worker
 
       - name: Check Dart package boundaries
         run: python3 tool/check_dart_boundaries.py

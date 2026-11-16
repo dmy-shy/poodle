@@ -136,6 +136,21 @@ void main() {
     expect(calendar.snapshot, same(current));
   }, skip: kIsWeb);
 
+  test('disposing the calendar invalidates pending reads', () async {
+    final courses = OfflineCourses();
+    final cache = DelayedCalendarCache();
+    final calendar = CalendarRepository(courses, cache: cache);
+    addTearDown(courses.dispose);
+
+    calendar.bindAccount('alice');
+    final pending = calendar.load();
+    calendar.dispose();
+
+    cache.alice.complete(null);
+    expect(await pending, isNull);
+    expect(calendar.snapshot, isNull);
+  }, skip: kIsWeb);
+
   for (final malformed in ['not JSON', '[]']) {
     test('web recovers from calendar cache: $malformed', () async {
       final scope = sha256.convert(utf8.encode('server-a:alice'));

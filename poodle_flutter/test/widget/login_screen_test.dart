@@ -85,12 +85,8 @@ void main() {
       await tester.pumpAndSettle();
       await tester.tap(find.text('Send reset instructions'));
       await tester.pumpAndSettle();
-      expect(
-        find.text(
-          'This is a preview. Your request was simulated; no email was sent.',
-        ),
-        findsOneWidget,
-      );
+      expect(find.text('Reset request'), findsOneWidget);
+      expect(find.text('No email was sent.'), findsOneWidget);
       await tester.tap(find.byTooltip('Close'));
       await tester.pumpAndSettle();
       await tester.ensureVisible(find.text('Join by invitation'));

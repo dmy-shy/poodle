@@ -2,8 +2,8 @@
 
 Poodle is an English/Ukrainian learning management app for students, teachers, and university administrators.
 
-1. Install Flutter 3.44.4 (with Dart 3.12.2) and Serverpod CLI 4.0.4.
-2. From the repository root, run `flutter pub get`.
+1. Install Flutter 3.47.4 (with Dart 3.13.3; pinned in `.fvmrc`) and Serverpod CLI 4.0.4.
+2. From the repository root, run `flutter pub get --enforce-lockfile`.
 3. Set up local configuration using the [server guide](docs/development/server.md).
 4. From `poodle_server/`, run `serverpod start`. It launches the configured Flutter companion app.
 5. To work on notebook processing or search indexing, start the [worker](poodle_worker/README.md) separately.

@@ -9,6 +9,9 @@ import 'package:poodle_flutter/data/services/onboarding_store.dart';
 import 'package:poodle_flutter/features/dashboard/presentation/views/dashboard_screen.dart';
 import '../support/load_fonts.dart';
 
+// Home displays local times. Fix the wall-clock time across runner time zones.
+DateTime _dashboardTime() => DateTime(2026, 10, 20, 15);
+
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUpAll(loadPreviewFonts);
@@ -33,7 +36,7 @@ void main() {
           onboardingRepository: onboarding,
           dashboardRepository: FakeDashboardRepository(
             latency: Duration.zero,
-            clock: () => DateTime.utc(2026, 10, 20, 12),
+            clock: _dashboardTime,
           ),
           minimumSplashDuration: Duration.zero,
         ),
@@ -72,7 +75,7 @@ void main() {
           dashboardRepository: FakeDashboardRepository(
             scenario: scenario,
             latency: Duration.zero,
-            clock: () => DateTime.utc(2026, 10, 20, 12),
+            clock: _dashboardTime,
           ),
           minimumSplashDuration: Duration.zero,
         ),
@@ -105,7 +108,7 @@ void main() {
         onboardingRepository: onboarding,
         dashboardRepository: FakeDashboardRepository(
           latency: const Duration(seconds: 5),
-          clock: () => DateTime.utc(2026, 10, 20, 12),
+          clock: _dashboardTime,
         ),
         minimumSplashDuration: Duration.zero,
       ),

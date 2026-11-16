@@ -29,7 +29,7 @@ The stories describe planned LMS capabilities; this change does not implement th
 
 Use `--dart-define=ONBOARDING_PREVIEW=true` to force a fresh tour with isolated in-memory completion state. Normal launches use durable preferences. Non-normal PREVIEW_SCENARIO values bypass the tour unless the fresh-tour override is enabled.
 
-Visual baselines: [first story](../../../poodle_flutter/test/widget/goldens/onboarding_0_en.png), [Ukrainian notebook story](../../../poodle_flutter/test/widget/goldens/onboarding_2_uk.png), [final story](../../../poodle_flutter/test/widget/goldens/onboarding_9_en.png).
+Visual baselines: [first story](../../../poodle_flutter/test/widget/goldens/onboarding_0_en.png), [Ukrainian notebook story](../../../poodle_flutter/test/widget/goldens/onboarding_2_uk.png), [current final story](../../../poodle_flutter/test/widget/goldens/onboarding_4_en.png).
 
 ## Next steps
 

@@ -280,6 +280,13 @@ class CalendarRepository extends ChangeNotifier {
     return result;
   }
 
+  @override
+  void dispose() {
+    // A pending cache read or refresh must not notify after disposal.
+    _generation++;
+    super.dispose();
+  }
+
   void clear() {
     final account = _account;
     _account = null;
