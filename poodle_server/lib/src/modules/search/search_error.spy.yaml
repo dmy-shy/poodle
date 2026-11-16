@@ -1,0 +1,3 @@
+exception: SearchError
+fields:
+  code: String

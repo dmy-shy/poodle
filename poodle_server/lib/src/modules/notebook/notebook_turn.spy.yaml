@@ -1,0 +1,21 @@
+class: NotebookTurnRecord
+serverOnly: true
+table: poodle_notebook_turn
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  notebookId: UuidValue
+  ownerUserId: UuidValue
+  requestKey: String
+  turnIndex: int
+  role: String
+  content: String
+  citationsJson: String, default='[]'
+  insufficientEvidence: bool, default=false
+  sourceRevision: int
+  createdAt: DateTime, default=now
+indexes:
+  poodle_notebook_turn_order:
+    fields: notebookId, turnIndex
+  poodle_notebook_turn_request:
+    fields: ownerUserId, requestKey
+    unique: true

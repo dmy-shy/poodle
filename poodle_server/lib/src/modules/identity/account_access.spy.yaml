@@ -1,0 +1,25 @@
+### Platform and university authority; teacher/student roles remain course-scoped.
+class: AccountAccess
+serverOnly: true
+table: poodle_account_access
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  authUser: module:serverpod_auth_core:AuthUser?, relation(onDelete=Cascade)
+  isAdmin: bool, default=false
+  university: UniversityRecord?, relation(optional, onDelete=Restrict)
+  isUniversityAdmin: bool, default=false
+  teacherApproved: bool, default=false
+  developmentBootstrap: bool, default=false
+  developmentPersona: String?
+  ### Canonical address shown by Poodle. Provider addresses may change independently.
+  verifiedEmail: String?
+  ### Invalidates pending account-security operations after a credential change.
+  credentialVersion: int, default=0
+  createdAt: DateTime, defaultModel=now
+indexes:
+  poodle_account_access_user_unique:
+    fields: authUserId
+    unique: true
+  poodle_account_access_persona_unique:
+    fields: developmentPersona
+    unique: true

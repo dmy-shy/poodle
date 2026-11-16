@@ -1,0 +1,13 @@
+### University boundary for institutional accounts and courses.
+class: UniversityRecord
+serverOnly: true
+table: poodle_university
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  name: String
+  slug: String
+  active: bool, default=true
+indexes:
+  poodle_university_slug_unique:
+    fields: slug
+    unique: true

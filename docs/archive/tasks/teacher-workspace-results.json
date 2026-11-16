@@ -1,0 +1,43 @@
+{
+  "milestone": "Teacher workspace",
+  "verifiedOn": "2026-10-30",
+  "implementation": {
+    "backend": "Serverpod endpoints with active course membership authorization and persisted data",
+    "features": [
+      "Teacher Home course summaries and course workspace",
+      "Assignment draft/publication, text and private file submissions, version history",
+      "Draft/published assignment grades and feedback, grading locks and individual reopening",
+      "Versioned single-choice and true/false tests with timed attempts and server scoring",
+      "Whole-test score and answer-review release after closing",
+      "Gradebook using highest percentage test attempt across versions",
+      "Course roster and account-scoped teacher defaults",
+      "English/Ukrainian UI and account-change response isolation"
+    ]
+  },
+  "migration": {
+    "name": "20261030122152057-teacher-workspace",
+    "applied": true,
+    "method": "Android Studio serverpod start terminal Migrate action"
+  },
+  "checks": {
+    "serverAnalyzer": "No issues found",
+    "flutterAnalyzer": "No issues found",
+    "serverTests": {"passed": 62, "failed": 0},
+    "teacherFlutterTests": {"passed": 5, "failed": 0},
+    "fullFlutterSuite": {
+      "passed": 150,
+      "failed": 23,
+      "log": "/private/tmp/poodle-flutter-suite.log",
+      "failureAreas": ["onboarding", "course preview fixture", "iOS navigation", "dashboard previews and visuals", "live account screen expectation"],
+      "note": "Failures are in existing suites; a clean pre-change baseline was not available. Do not interpret this milestone as a green full-suite result."
+    },
+    "runtime": "Serverpod and Flutter hot restart confirmed in Android Studio; recent runtime logs show successful compilation and reload",
+    "liveWebSmoke": "Teacher Home cards, course workspace tabs and assignment editor loaded successfully"
+  },
+  "remainingAcceptance": [
+    "Resolve the full Flutter suite failures",
+    "Android and iOS teacher/student end-to-end acceptance, including native file picking and keyboard/navigation",
+    "Measure coverage against the project thresholds and run the pilot load scenario"
+  ],
+  "workflow": "Used CLI generation/testing and Android Studio runtime controls under the user's explicit instruction to continue without Serverpod MCP. Generated protocol/client files were produced by Serverpod."
+}

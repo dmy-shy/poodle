@@ -1,0 +1,56 @@
+# Files and directories created by pub
+.dart_tool/
+.packages
+
+# Pubspec overrides
+pubspec_overrides.yaml
+
+# Agents
+.dart_skills/
+.agents/
+.claude/
+.gemini/
+.cursor/
+.vscode/mcp.json
+.codex/
+.mcp.json
+
+# Serverpod Cloud CLI
+.scloud/
+
+# Local and reproducible outputs
+.DS_Store
+.idea/
+*.iml
+build/
+coverage/
+.playwright-cli/
+/output/
+/email_templates/preview/
+
+# Local environment secrets; safe setup templates remain versioned
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+.envrc.local
+
+# Pub caches and generated API documentation
+.pub-cache/
+.pub/
+doc/api/
+
+# Logs, editor backups, and Python caches from maintenance tools
+*.log
+*.swp
+*.swo
+*~
+__pycache__/
+*.py[cod]
+
+# Other operating-system metadata
+._*
+Thumbs.db
+Desktop.ini

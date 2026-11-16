@@ -1,0 +1,7 @@
+### Safe pending-email state returned to the signed-in owner.
+class: PendingEmailChangeSummary
+fields:
+  id: UuidValue
+  requestedEmail: String
+  expiresAt: DateTime
+  resendAvailableAt: DateTime

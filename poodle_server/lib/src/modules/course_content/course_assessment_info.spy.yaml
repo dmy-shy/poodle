@@ -1,0 +1,7 @@
+class: CourseAssessmentInfo
+fields:
+  instructions: String
+  opensAt: DateTime?
+  closesAt: DateTime?
+  attemptLimit: int?
+  timeLimitMinutes: int?

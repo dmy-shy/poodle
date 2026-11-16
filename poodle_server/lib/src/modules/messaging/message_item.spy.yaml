@@ -1,0 +1,7 @@
+### A persisted private-message row returned to an authorized participant.
+class: MessageItem
+fields:
+  id: int
+  senderId: UuidValue
+  text: String
+  createdAt: DateTime

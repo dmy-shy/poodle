@@ -1,0 +1,11 @@
+class: TeacherDefaultsRecord
+serverOnly: true
+table: poodle_teacher_defaults
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  ownerId: UuidValue
+  settings: TeachingSettings
+indexes:
+  poodle_teacher_defaults_unique:
+    fields: ownerId
+    unique: true

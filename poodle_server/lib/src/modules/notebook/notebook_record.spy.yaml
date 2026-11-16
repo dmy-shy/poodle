@@ -1,0 +1,17 @@
+class: NotebookRecord
+serverOnly: true
+table: poodle_notebook
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  courseId: UuidValue
+  assessmentActivityId: UuidValue
+  ownerUserId: UuidValue
+  configRevision: int, default=0
+  createdAt: DateTime, default=now
+  updatedAt: DateTime, default=now
+indexes:
+  poodle_notebook_owner_assessment:
+    fields: ownerUserId, assessmentActivityId
+    unique: true
+  poodle_notebook_course:
+    fields: courseId

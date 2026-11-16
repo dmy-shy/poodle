@@ -1,0 +1,55 @@
+{
+  "testedAtUtc": "2026-10-29T18:17:54.673157Z",
+  "generationModel": "gpt-6-luna",
+  "reasoningEffort": "none",
+  "embeddingSpace": "openai:text-embedding-3-small:1536:v1",
+  "database": "isolated Serverpod test database",
+  "ingestionStatus": "complete",
+  "chunks": 4,
+  "accountedSpentMicros": 383,
+  "reservedMicros": 0,
+  "answers": [
+    {
+      "language": "en",
+      "question": "What does a citation identify?",
+      "answer": "A citation identifies the source version and the passage supporting an answer.",
+      "citations": [
+        {
+          "__className__": "NotebookCitation",
+          "chunkId": "01a188e1-da45-7047-915c-9c7ebfb7e53d",
+          "sourceId": "01a188e1-d755-70f4-b598-925e31f3c779",
+          "sourceVersionId": "e4c4f9cf-5255-4b06-bf8e-57eee135a72c",
+          "sourceVersion": 1,
+          "title": "test-data.md",
+          "locationLabel": "block-3"
+        }
+      ],
+      "insufficientEvidence": false
+    },
+    {
+      "language": "uk",
+      "question": "Що визначає посилання?",
+      "answer": "Посилання визначає версію джерела та уривок, що підтверджує відповідь.",
+      "citations": [
+        {
+          "__className__": "NotebookCitation",
+          "chunkId": "01a188e1-da45-7047-915c-9c7ebfb7e53d",
+          "sourceId": "01a188e1-d755-70f4-b598-925e31f3c779",
+          "sourceVersionId": "e4c4f9cf-5255-4b06-bf8e-57eee135a72c",
+          "sourceVersion": 1,
+          "title": "test-data.md",
+          "locationLabel": "block-3"
+        }
+      ],
+      "insufficientEvidence": false
+    },
+    {
+      "language": "en",
+      "question": "What is the exact launch date of the imaginary spacecraft Starflower 99?",
+      "answer": "The selected sources do not contain enough information to answer.",
+      "citations": [],
+      "insufficientEvidence": true
+    }
+  ],
+  "providerFailures": []
+}

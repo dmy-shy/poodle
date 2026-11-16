@@ -1,0 +1,7 @@
+class: NotebookAssessmentConfigView
+fields:
+  courseId: UuidValue
+  assessmentActivityId: UuidValue
+  revision: int
+  defaultMaterialActivityIds: List<UuidValue>
+  allowedFormats: List<String>

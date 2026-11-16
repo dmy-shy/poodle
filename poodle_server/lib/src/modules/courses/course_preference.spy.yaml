@@ -1,0 +1,13 @@
+class: CoursePreference
+serverOnly: true
+table: poodle_course_preference
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  authUserId: UuidValue
+  courseId: UuidValue
+  starred: bool, default=false
+  hidden: bool, default=false
+indexes:
+  poodle_course_preference_unique:
+    fields: authUserId, courseId
+    unique: true

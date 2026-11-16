@@ -1,0 +1,5 @@
+class: StudentGradeCourse
+fields:
+  courseId: UuidValue
+  courseTitle: String
+  grades: List<StudentGradeRow>

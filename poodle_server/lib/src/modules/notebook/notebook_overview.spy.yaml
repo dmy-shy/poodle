@@ -1,0 +1,9 @@
+class: NotebookOverview
+fields:
+  notebookId: UuidValue?
+  courseId: UuidValue
+  assessmentActivityId: UuidValue
+  configured: bool
+  configRevision: int
+  allowedFormats: List<String>
+  sources: List<NotebookSourceInfo>

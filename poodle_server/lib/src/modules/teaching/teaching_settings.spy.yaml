@@ -1,0 +1,13 @@
+class: TeachingSettings
+fields:
+  title: String
+  instructions: String
+  opensAt: DateTime?
+  closesAt: DateTime?
+  maxPoints: double, default=100
+  required: bool, default=false
+  allowText: bool, default=true
+  allowFile: bool, default=true
+  attemptLimit: int, default=1
+  timeLimitMinutes: int, default=30
+  shuffle: bool, default=false

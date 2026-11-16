@@ -1,0 +1,4 @@
+class: UniversitySummary
+fields:
+  id: UuidValue
+  name: String

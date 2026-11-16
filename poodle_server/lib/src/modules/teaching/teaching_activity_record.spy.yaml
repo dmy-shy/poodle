@@ -1,0 +1,17 @@
+class: TeachingActivityRecord
+serverOnly: true
+table: poodle_teaching_activity
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  courseId: UuidValue
+  activityId: UuidValue
+  kind: String
+  revision: int, default=1
+  published: bool, default=false
+  released: bool, default=false
+  settings: TeachingSettings
+  questions: List<TeachingQuestion>
+indexes:
+  poodle_teaching_activity_unique:
+    fields: activityId
+    unique: true

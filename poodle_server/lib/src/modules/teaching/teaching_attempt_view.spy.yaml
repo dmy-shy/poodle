@@ -1,0 +1,12 @@
+class: TeachingAttemptView
+fields:
+  id: UuidValue
+  ownerId: UuidValue
+  ownerLabel: String
+  revision: int
+  questions: List<TeachingQuestion>
+  answers: List<int>
+  expiresAt: DateTime
+  submittedAt: DateTime?
+  score: double?
+  maxPoints: double

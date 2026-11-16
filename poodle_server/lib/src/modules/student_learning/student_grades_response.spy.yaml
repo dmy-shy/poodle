@@ -1,0 +1,3 @@
+class: StudentGradesResponse
+fields:
+  courses: List<StudentGradeCourse>

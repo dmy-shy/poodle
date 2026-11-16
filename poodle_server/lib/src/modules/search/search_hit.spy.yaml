@@ -1,0 +1,13 @@
+class: SearchHit
+fields:
+  targetId: UuidValue
+  courseId: UuidValue
+  sectionId: UuidValue?
+  activityId: UuidValue?
+  kind: String
+  title: String
+  breadcrumb: String
+  excerpt: String
+  draft: bool
+  page: int?
+  location: String?

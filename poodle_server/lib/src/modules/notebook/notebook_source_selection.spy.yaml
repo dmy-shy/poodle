@@ -1,0 +1,16 @@
+class: NotebookSourceSelectionRecord
+serverOnly: true
+table: poodle_notebook_source_selection
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  notebookId: UuidValue
+  sourceId: UuidValue
+  selected: bool, default=true
+  selectedVersion: int
+  createdAt: DateTime, default=now
+indexes:
+  poodle_notebook_selection_unique:
+    fields: notebookId, sourceId
+    unique: true
+  poodle_notebook_selection_lookup:
+    fields: notebookId, selected

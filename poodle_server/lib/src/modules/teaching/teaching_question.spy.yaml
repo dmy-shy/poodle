@@ -1,0 +1,7 @@
+class: TeachingQuestion
+fields:
+  prompt: String
+  kind: String
+  options: List<String>
+  correctIndex: int?
+  points: double

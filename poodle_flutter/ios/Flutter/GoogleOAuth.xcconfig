@@ -1,0 +1,3 @@
+#include "../../google_oauth.properties"
+GOOGLE_IOS_CLIENT_ID = $(GOOGLE_IOS_CLIENT_ID_PREFIX).apps.googleusercontent.com
+GOOGLE_REVERSED_CLIENT_ID = com.googleusercontent.apps.$(GOOGLE_IOS_CLIENT_ID_PREFIX)

@@ -1,0 +1,11 @@
+class: AdministratorRequestSummary
+fields:
+  id: UuidValue
+  name: String
+  email: String
+  university: String
+  position: String
+  note: String
+  status: String
+  createdAt: DateTime
+  reviewNote: String?

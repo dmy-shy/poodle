@@ -1,0 +1,16 @@
+class: CourseActivity
+fields:
+  id: UuidValue
+  courseId: UuidValue
+  title: String
+  description: String?
+  kind: String
+  draft: bool
+  file: CourseFileInfo?
+  link: CourseLinkInfo?
+  announcement: CourseAnnouncementInfo?
+  assessment: CourseAssessmentInfo?
+  availability: String?
+  previousId: UuidValue?
+  nextId: UuidValue?
+  managedAssessment: bool, default=false

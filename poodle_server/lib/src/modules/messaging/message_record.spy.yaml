@@ -1,0 +1,16 @@
+class: MessageRecord
+serverOnly: true
+table: poodle_message
+fields:
+  id: int?, defaultPersist=serial
+  conversationId: UuidValue
+  senderId: UuidValue
+  clientSendId: UuidValue
+  text: String
+  createdAt: DateTime, defaultModel=now
+indexes:
+  poodle_message_sender_send_unique:
+    fields: conversationId, senderId, clientSendId
+    unique: true
+  poodle_message_history:
+    fields: conversationId, id

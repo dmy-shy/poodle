@@ -1,0 +1,6 @@
+class: NotebookJobStatus
+fields:
+  id: UuidValue
+  status: String
+  failureCode: String?
+  createdAt: DateTime

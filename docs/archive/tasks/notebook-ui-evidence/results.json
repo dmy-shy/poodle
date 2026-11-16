@@ -1,0 +1,2125 @@
+{
+  "date": "2026-10-30",
+  "surface": "Running Flutter web app in Chrome; not Android emulator",
+  "passed": [
+    "Authenticated as seeded student",
+    "Opened Creative thinking / Test data / Study notebook",
+    "Submitted a new English question and received a live answer with source version and passage citations",
+    "Submitted a new Ukrainian question and received a live Ukrainian answer with a source citation",
+    "Reloaded page, signed back in and verified both new answers persisted"
+  ],
+  "observed_existing": [
+    "Unsupported-question refusal is visible in saved history"
+  ],
+  "not_completed": [
+    "Private upload: browser extension lacks file URL access; native fallback rejected by automatic approval review. No test file uploaded.",
+    "Private ingestion remains dependent on a working ClamAV signature database."
+  ],
+  "screenshots": [
+    "live-english-answer.jpg",
+    "live-bilingual-answers.jpg",
+    "persisted-bilingual-answers.jpg"
+  ],
+  "code_changes": false,
+  "runtime_errors": "No runtime errors reported by Dart MCP after the test",
+  "logs": {
+    "tail_server_logs": [
+      [
+        {
+          "type": "log",
+          "time": "2026-10-30T14:20:32.921933",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:20:32.974709",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:20:32.980040",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:20:33.041284",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:20:33.042482",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 6,
+          "completedAt": "2026-10-30T14:21:04.970390"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:43.282872",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 13,
+          "completedAt": "2026-10-30T14:21:43.312466"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:43.382087",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:43.435736",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:43.442602",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:43.740459",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:43.741906",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 3,
+          "completedAt": "2026-10-30T14:21:43.918330"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:48.272925",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Analyzing changes",
+          "success": true,
+          "durationMs": 156,
+          "completedAt": "2026-10-30T14:21:48.438055"
+        },
+        {
+          "type": "operation",
+          "label": "Generating code",
+          "success": true,
+          "durationMs": 257,
+          "completedAt": "2026-10-30T14:21:48.695861"
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 183,
+          "completedAt": "2026-10-30T14:21:48.888324"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:48.969410",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:49.022815",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:49.027747",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:49.096200",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:21:49.097311",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 4,
+          "completedAt": "2026-10-30T14:21:49.955277"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:03.263795",
+          "level": "info",
+          "message": "Server migration skipped. No changes detected.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:22:03.279717Z",
+          "level": "info",
+          "message": "No repair migration to apply.",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:22:03.355171Z",
+          "level": "info",
+          "message": "Applied database migration:\n - 20261030122152057-teacher-workspace",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:22:03.482886Z",
+          "level": "info",
+          "message": "WebServer: Webserver listening on http://localhost:8082",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:03.540177",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:03.543273",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Creating migration",
+          "success": true,
+          "durationMs": 479,
+          "completedAt": "2026-10-30T14:22:03.626273"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:03.626290",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 537,
+          "completedAt": "2026-10-30T14:22:09.276178"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:22:09.280581Z",
+          "level": "info",
+          "message": "SIGINT (2) received, time: 2026-10-30 12:22:09.277609Z",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:22:09.282028Z",
+          "level": "info",
+          "message": "SERVERPOD initiating shutdown, time: 2026-10-30 12:22:09.278598Z",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:09.744270",
+          "level": "info",
+          "message": "The Dart VM service is listening on http://127.0.0.1:60314/Nv_qZFzUkkY=/",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:09.745801",
+          "level": "info",
+          "message": "✓ Server restarted.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:22:09.774234Z",
+          "level": "info",
+          "message": "Latest database migration already applied.",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:09.798533",
+          "level": "info",
+          "message": "  Poodle app: Performing hot restart...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:09.805664",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:22:10.022544Z",
+          "level": "info",
+          "message": "WebServer: Webserver listening on http://localhost:8082",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:10.231916",
+          "level": "info",
+          "message": "✓ Flutter app restarted.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Hot restart",
+          "success": true,
+          "durationMs": 1495,
+          "completedAt": "2026-10-30T14:22:10.234289"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:22:10.234300",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 19,
+          "completedAt": "2026-10-30T14:22:10.971032"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:23:16.876827",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 29,
+          "completedAt": "2026-10-30T14:23:16.933883"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:23:17.020030",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:23:17.073390",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:23:17.082682",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:23:17.515975",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:23:17.517248",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 9,
+          "completedAt": "2026-10-30T14:24:04.971683"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:25:41.069307",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 43,
+          "completedAt": "2026-10-30T14:25:41.142947"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:25:41.231968",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:25:41.284507",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:25:41.292972",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:25:41.972879",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:25:42.000378",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 4,
+          "completedAt": "2026-10-30T14:26:04.986516"
+        },
+        {
+          "type": "operation",
+          "label": "emailIdp.login",
+          "success": true,
+          "durationMs": 675,
+          "completedAt": "2026-10-30T14:26:35.187998"
+        },
+        {
+          "type": "operation",
+          "label": "account.me",
+          "success": true,
+          "durationMs": 8,
+          "completedAt": "2026-10-30T14:26:35.252570"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 10,
+          "completedAt": "2026-10-30T14:26:35.274718"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 112,
+          "completedAt": "2026-10-30T14:26:35.471317"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 39,
+          "completedAt": "2026-10-30T14:26:35.501501"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 50,
+          "completedAt": "2026-10-30T14:26:35.505063"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 11,
+          "completedAt": "2026-10-30T14:26:35.705487"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 29,
+          "completedAt": "2026-10-30T14:26:35.707854"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:27:21.435432",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 39,
+          "completedAt": "2026-10-30T14:27:21.498583"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:27:21.578492",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:27:21.631231",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:27:21.639581",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:27:21.979713",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:27:21.980837",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "teaching.listActivities",
+          "success": true,
+          "durationMs": 32,
+          "completedAt": "2026-10-30T14:27:49.315206"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.members",
+          "success": true,
+          "durationMs": 30,
+          "completedAt": "2026-10-30T14:27:49.328931"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:28:03.399659",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 41,
+          "completedAt": "2026-10-30T14:28:03.466435"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:28:03.555258",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:28:03.608777",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:28:03.615520",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:28:03.970378",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:28:03.971493",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 5,
+          "completedAt": "2026-10-30T14:28:05.038940"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.getDefaults",
+          "success": true,
+          "durationMs": 44,
+          "completedAt": "2026-10-30T14:28:32.743220"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 16,
+          "completedAt": "2026-10-30T14:28:32.800699"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:29:27.242062",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 31,
+          "completedAt": "2026-10-30T14:29:27.306119"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:29:27.370220",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:29:27.424641",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:29:27.433466",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:29:27.896667",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:29:27.898349",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 5,
+          "completedAt": "2026-10-30T14:30:05.029523"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:23.373046",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 16,
+          "completedAt": "2026-10-30T14:32:23.422694"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:23.494224",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:23.548502",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:23.553890",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:24.212854",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:24.214101",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:48.652312",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 14,
+          "completedAt": "2026-10-30T14:32:48.690909"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:48.756546",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:48.810028",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:48.817610",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:49.401294",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:49.402623",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:51.154486",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 39,
+          "completedAt": "2026-10-30T14:32:51.217289"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:51.282718",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:51.336270",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:51.341206",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:51.797231",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:51.799144",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:55.217109",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 13,
+          "completedAt": "2026-10-30T14:32:55.259512"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:55.327460",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:55.407519",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:55.407525",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:55.848954",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:32:55.850121",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 3,
+          "completedAt": "2026-10-30T14:33:04.995936"
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 103,
+          "completedAt": "2026-10-30T14:33:34.993047"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:33:34.996364Z",
+          "level": "info",
+          "message": "SIGINT (2) received, time: 2026-10-30 12:33:34.994438Z",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:33:34.997569Z",
+          "level": "info",
+          "message": "SERVERPOD initiating shutdown, time: 2026-10-30 12:33:34.994774Z",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:33:35.439367",
+          "level": "info",
+          "message": "The Dart VM service is listening on http://127.0.0.1:61951/ttVa8hAnb7E=/",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:33:35.440841",
+          "level": "info",
+          "message": "✓ Server restarted.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:33:35.499221",
+          "level": "info",
+          "message": "  Poodle app: Performing hot restart...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:33:35.499976",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T12:33:35.632969Z",
+          "level": "info",
+          "message": "WebServer: Webserver listening on http://localhost:8082",
+          "scope": {
+            "id": "root",
+            "label": "server"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 17,
+          "completedAt": "2026-10-30T14:33:36.025162"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:33:36.025648",
+          "level": "info",
+          "message": "✓ Flutter app restarted.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Hot restart",
+          "success": true,
+          "durationMs": 1183,
+          "completedAt": "2026-10-30T14:33:36.073573"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:33:36.073575",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:34:19.685548",
+          "level": "info",
+          "message": "Files changed",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "Compiling server",
+          "success": true,
+          "durationMs": 28,
+          "completedAt": "2026-10-30T14:34:19.737481"
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:34:19.808111",
+          "level": "info",
+          "message": "✓ Server reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:34:19.866745",
+          "level": "info",
+          "message": "  Poodle app: Performing hot reload...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:34:19.866749",
+          "level": "info",
+          "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:34:20.313834",
+          "level": "info",
+          "message": "✓ Flutter app reloaded.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "log",
+          "time": "2026-10-30T14:34:20.316817",
+          "level": "info",
+          "message": "✓ Browser refresh triggered.",
+          "scope": {
+            "id": "root",
+            "label": "unknown"
+          },
+          "metadata": {
+            "serverpod:logType": "Instance of 'TextLogType'"
+          }
+        },
+        {
+          "type": "operation",
+          "label": "WEB /",
+          "success": true,
+          "durationMs": 8,
+          "completedAt": "2026-10-30T14:34:20.981744"
+        },
+        {
+          "type": "operation",
+          "label": "emailIdp.login",
+          "success": true,
+          "durationMs": 118,
+          "completedAt": "2026-10-30T16:41:49.629045"
+        },
+        {
+          "type": "operation",
+          "label": "account.me",
+          "success": true,
+          "durationMs": 9,
+          "completedAt": "2026-10-30T16:41:49.686556"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 11,
+          "completedAt": "2026-10-30T16:41:49.719348"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 29,
+          "completedAt": "2026-10-30T16:41:49.837341"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 24,
+          "completedAt": "2026-10-30T16:41:49.914563"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 33,
+          "completedAt": "2026-10-30T16:41:49.920137"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 12,
+          "completedAt": "2026-10-30T16:41:50.155918"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 33,
+          "completedAt": "2026-10-30T16:41:50.169661"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.listActivities",
+          "success": true,
+          "durationMs": 20,
+          "completedAt": "2026-10-30T16:42:01.300316"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.members",
+          "success": true,
+          "durationMs": 25,
+          "completedAt": "2026-10-30T16:42:01.310147"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.getDefaults",
+          "success": true,
+          "durationMs": 28,
+          "completedAt": "2026-10-30T16:42:15.212292"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 8,
+          "completedAt": "2026-10-30T16:42:15.236474"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.listActivities",
+          "success": true,
+          "durationMs": 18,
+          "completedAt": "2026-10-30T16:42:37.786949"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.getDefaults",
+          "success": true,
+          "durationMs": 29,
+          "completedAt": "2026-10-30T16:42:49.025620"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 10,
+          "completedAt": "2026-10-30T16:42:49.038402"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.listActivities",
+          "success": true,
+          "durationMs": 6,
+          "completedAt": "2026-10-30T16:43:14.821780"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 27,
+          "completedAt": "2026-10-30T16:43:21.701693"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.getDefaults",
+          "success": true,
+          "durationMs": 25,
+          "completedAt": "2026-10-30T16:43:28.260088"
+        },
+        {
+          "type": "operation",
+          "label": "emailIdp.login",
+          "success": true,
+          "durationMs": 39,
+          "completedAt": "2026-10-30T16:49:14.531802"
+        },
+        {
+          "type": "operation",
+          "label": "account.me",
+          "success": true,
+          "durationMs": 3,
+          "completedAt": "2026-10-30T16:49:14.617296"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 8,
+          "completedAt": "2026-10-30T16:49:14.662314"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 6,
+          "completedAt": "2026-10-30T16:49:14.926878"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 12,
+          "completedAt": "2026-10-30T16:49:14.994889"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 6,
+          "completedAt": "2026-10-30T16:49:15.311422"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 7,
+          "completedAt": "2026-10-30T16:49:15.311431"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 27,
+          "completedAt": "2026-10-30T16:49:35.723536"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getActivity",
+          "success": true,
+          "durationMs": 33,
+          "completedAt": "2026-10-30T16:49:52.007849"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.openNotebook",
+          "success": true,
+          "durationMs": 49,
+          "completedAt": "2026-10-30T16:50:07.709674"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getTurns",
+          "success": true,
+          "durationMs": 30,
+          "completedAt": "2026-10-30T16:50:07.760437"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.ask",
+          "success": true,
+          "durationMs": 44,
+          "completedAt": "2026-10-30T16:50:26.894810"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 33,
+          "completedAt": "2026-10-30T16:50:29.031896"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 31,
+          "completedAt": "2026-10-30T16:50:31.139943"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 33,
+          "completedAt": "2026-10-30T16:50:33.261526"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 21,
+          "completedAt": "2026-10-30T16:50:35.365384"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 15,
+          "completedAt": "2026-10-30T16:50:37.457132"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.openNotebook",
+          "success": true,
+          "durationMs": 36,
+          "completedAt": "2026-10-30T16:50:37.571405"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getTurns",
+          "success": true,
+          "durationMs": 11,
+          "completedAt": "2026-10-30T16:50:37.606978"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.ask",
+          "success": true,
+          "durationMs": 52,
+          "completedAt": "2026-10-30T16:51:40.623359"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 34,
+          "completedAt": "2026-10-30T16:51:42.751453"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 28,
+          "completedAt": "2026-10-30T16:51:44.854823"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 34,
+          "completedAt": "2026-10-30T16:51:46.977908"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getJobStatus",
+          "success": true,
+          "durationMs": 22,
+          "completedAt": "2026-10-30T16:51:49.099794"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.openNotebook",
+          "success": true,
+          "durationMs": 40,
+          "completedAt": "2026-10-30T16:51:49.168838"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getTurns",
+          "success": true,
+          "durationMs": 11,
+          "completedAt": "2026-10-30T16:51:49.199404"
+        },
+        {
+          "type": "operation",
+          "label": "emailIdp.login",
+          "success": true,
+          "durationMs": 64,
+          "completedAt": "2026-10-30T16:58:18.392019"
+        },
+        {
+          "type": "operation",
+          "label": "account.me",
+          "success": true,
+          "durationMs": 3,
+          "completedAt": "2026-10-30T16:58:18.419462"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 4,
+          "completedAt": "2026-10-30T16:58:18.459887"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 33,
+          "completedAt": "2026-10-30T16:58:18.692084"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 39,
+          "completedAt": "2026-10-30T16:58:18.692092"
+        },
+        {
+          "type": "operation",
+          "label": "teaching.dashboard",
+          "success": true,
+          "durationMs": 6,
+          "completedAt": "2026-10-30T16:58:18.883293"
+        },
+        {
+          "type": "operation",
+          "label": "course.listMyCourses",
+          "success": true,
+          "durationMs": 5,
+          "completedAt": "2026-10-30T16:58:18.883300"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getCourseContent",
+          "success": true,
+          "durationMs": 8,
+          "completedAt": "2026-10-30T16:58:25.441456"
+        },
+        {
+          "type": "operation",
+          "label": "courseContent.getActivity",
+          "success": true,
+          "durationMs": 27,
+          "completedAt": "2026-10-30T16:58:25.762588"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.openNotebook",
+          "success": true,
+          "durationMs": 42,
+          "completedAt": "2026-10-30T16:58:26.038657"
+        },
+        {
+          "type": "operation",
+          "label": "notebook.getTurns",
+          "success": true,
+          "durationMs": 10,
+          "completedAt": "2026-10-30T16:58:26.038672"
+        }
+      ]
+    ],
+    "tail_flutter_logs": [
+      [
+        "Resolving dependencies in `/Users/mac/Documents/Mobile_Dev/flutter_dev/poodle`...",
+        "Downloading packages...",
+        "  _fe_analyzer_shared 103.0.0 (111.0.0 available)",
+        "  amazon_cognito_identity_dart_2 3.8.2 (4.0.1 available)",
+        "  analyzer 13.3.0 (14.7.0 available)",
+        "  animations 2.2.0 (3.0.0 available)",
+        "  archive 4.3.0 (4.5.2 available)",
+        "  asn1lib 1.6.5 (1.6.8 available)",
+        "  cli_util 0.4.2 (0.6.0 available)",
+        "  coverage 1.15.1 (1.16.0 available)",
+        "  cross_file 0.3.5+5 (0.4.0 available)",
+        "  crypto 3.0.7 (3.0.8 available)",
+        "  cupertino_icons 1.0.9 (2.0.0 available)",
+        "  cupertino_ui 1.1.4 (1.1.5 available)",
+        "  desktop_webview_window 0.3.0 (0.4.0 available)",
+        "! flutter_secure_storage 10.3.4 (overridden) (11.2.0 available)",
+        "  flutter_secure_storage_darwin 0.3.2 (0.4.3 available)",
+        "  flutter_svg 2.3.0 (2.3.2 available)",
+        "  frontend_server_client 4.1.0 (4.2.0 available)",
+        "  go_router 14.8.1 (18.1.2 available)",
+        "  google_fonts 8.2.1 (9.0.0 available)",
+        "  google_sign_in_android 7.2.17 (7.2.18 available)",
+        "  google_sign_in_ios 6.3.6 (6.3.8 available)",
+        "  googleapis_auth 2.3.4 (2.3.5 available)",
+        "  http_multi_server 3.2.2 (3.2.3 available)",
+        "  image 4.10.1 (4.12.0 available)",
+        "  jni 1.1.0 (1.1.1 available)",
+        "  material_color_utilities 0.13.0 (0.13.1 available)",
+        "  material_ui 1.8.0 (1.9.0 available)",
+        "  package_config 2.2.0 (3.0.0 available)",
+        "  pdfium_dart 0.3.1 (0.4.1 available)",
+        "  pdfium_flutter 0.3.1 (0.4.1 available)",
+        "  pdfrx 2.6.5 (2.11.0 available)",
+        "  pdfrx_engine 0.6.1 (0.9.0 available)",
+        "  pinput 6.0.2 (7.0.0 available)",
+        "  posix 6.5.2 (6.5.4 available)",
+        "  shared_preferences_android 2.4.28 (2.5.4 available)",
+        "  shared_preferences_foundation 2.5.7 (2.6.1 available)",
+        "  shelf 1.4.2 (1.4.3 available)",
+        "  shelf_static 1.1.3 (1.2.0 available)",
+        "  sqlite3 3.7.0 (3.8.0 available)",
+        "  sqlite3_connection_pool 0.2.12 (0.2.15 available)",
+        "  sqlite3_web 0.9.4 (0.9.5 available)",
+        "  sqlite_async 0.14.5 (0.14.7 available)",
+        "  sqlparser 0.44.5 (0.45.1 available)",
+        "  synchronized 3.4.2 (3.5.0 available)",
+        "  test 1.31.1 (1.33.0 available)",
+        "  test_api 0.7.12 (0.7.15 available)",
+        "  test_core 0.6.18 (0.6.21 available)",
+        "  vector_graphics 1.2.3 (1.2.5 available)",
+        "  vector_graphics_compiler 1.3.0 (1.3.4 available)",
+        "  vector_math 2.4.3 (2.4.4 available)",
+        "  vm_service 15.3.0 (15.4.0 available)",
+        "  web 1.1.1 (1.1.2 available)",
+        "  window_to_front 0.0.4 (1.0.0 available)",
+        "  xml 7.0.1 (7.1.0 available)",
+        "Got dependencies in `/Users/mac/Documents/Mobile_Dev/flutter_dev/poodle`!",
+        "54 packages have newer versions incompatible with dependency constraints.",
+        "Try `flutter pub outdated` for more information.",
+        "Launching lib/driver.dart on Web Server in debug mode...",
+        "lib/driver.dart is being served at http://localhost:55410",
+        "The web-server device requires the Dart Debug Chrome extension for debugging. Consider using the Chrome or Edge devices for an improved development workflow.",
+        "Debug service listening on ws://127.0.0.1:55484/VmxfpouYsOw=/ws",
+        "A Dart VM Service on Web Server is available at: http://127.0.0.1:55484/VmxfpouYsOw=",
+        "The Flutter DevTools debugger and profiler on Web Server is available at: http://127.0.0.1:55484/VmxfpouYsOw=/devtools/?uri=ws://127.0.0.1:55484/VmxfpouYsOw=/ws",
+        "Reloaded application in 803ms.",
+        "Reloaded application in 136ms.",
+        "Reloaded application in 289ms.",
+        "Reloaded application in 109ms.",
+        "Reloaded application in 140ms.",
+        "Reloaded application in 274ms.",
+        "Reloaded application in 90ms.",
+        "Reloaded application in 128ms.",
+        "Reloaded application in 472ms.",
+        "Reloaded application in 99ms.",
+        "Reloaded application in 673ms.",
+        "Reloaded application in 102ms.",
+        "Reloaded application in 118ms.",
+        "Reloaded application in 142ms.",
+        "Reloaded application in 112ms.",
+        "Reloaded application in 578ms.",
+        "Reloaded application in 296ms.",
+        "Reloaded application in 64ms.",
+        "Reloaded application in 397ms.",
+        "Reloaded application in 47ms.",
+        "Reloaded application in 283ms.",
+        "Reloaded application in 55ms.",
+        "Reloaded application in 61ms.",
+        "Restarted application in 412ms.",
+        "Reloaded application in 419ms.",
+        "Reloaded application in 609ms.",
+        "Reloaded application in 304ms.",
+        "Reloaded application in 315ms.",
+        "Reloaded application in 434ms.",
+        "Reloaded application in 593ms.",
+        "Reloaded application in 535ms.",
+        "Reloaded application in 399ms.",
+        "Reloaded application in 430ms.",
+        "Restarted application in 506ms.",
+        "Reloaded application in 304ms.",
+        "WebSocketProxyService: No pending tracker found for service extension (id: 3645)",
+        "No pending tracker found for service extension (id: 3645)"
+      ]
+    ]
+  }
+}

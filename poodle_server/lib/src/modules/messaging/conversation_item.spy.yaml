@@ -1,0 +1,11 @@
+### The authenticated participant's inbox representation, returned by messaging endpoints.
+class: ConversationItem
+fields:
+  id: UuidValue
+  peerId: UuidValue
+  peerEmail: String
+  isSelf: bool
+  canSend: bool
+  unreadCount: int
+  lastText: String?
+  lastMessageAt: DateTime?

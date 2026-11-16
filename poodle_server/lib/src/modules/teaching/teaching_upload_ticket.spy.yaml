@@ -1,0 +1,4 @@
+class: TeachingUploadTicket
+fields:
+  id: UuidValue
+  description: String

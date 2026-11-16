@@ -1,0 +1,4 @@
+class: NotebookAudioAccess
+fields:
+  url: String
+  expiresAt: DateTime

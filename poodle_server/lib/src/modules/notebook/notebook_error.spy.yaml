@@ -1,0 +1,3 @@
+exception: NotebookError
+fields:
+  code: String

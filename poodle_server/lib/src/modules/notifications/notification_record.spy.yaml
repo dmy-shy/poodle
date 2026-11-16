@@ -1,0 +1,20 @@
+class: NotificationRecord
+serverOnly: true
+table: poodle_notification
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  recipientId: UuidValue
+  eventKey: String
+  category: String
+  courseId: UuidValue?
+  activityId: UuidValue?
+  requestId: UuidValue?
+  title: String
+  createdAt: DateTime, defaultModel=now
+  readAt: DateTime?
+indexes:
+  poodle_notification_event_unique:
+    fields: recipientId, eventKey
+    unique: true
+  poodle_notification_recipient_time:
+    fields: recipientId, createdAt

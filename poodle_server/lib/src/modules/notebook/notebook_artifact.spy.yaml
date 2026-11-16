@@ -1,0 +1,23 @@
+class: NotebookArtifactRecord
+serverOnly: true
+table: poodle_notebook_artifact
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  notebookId: UuidValue
+  ownerUserId: UuidValue
+  kind: String
+  title: String
+  contentJson: String
+  sourceRevision: int
+  jobId: UuidValue?
+  language: String?
+  sourceSnapshotJson: String?
+  audioStoragePath: String?
+  stale: bool, default=false
+  createdAt: DateTime, default=now
+indexes:
+  poodle_notebook_artifact_list:
+    fields: notebookId, createdAt
+  poodle_notebook_artifact_job:
+    fields: jobId
+    unique: true

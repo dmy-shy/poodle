@@ -1,0 +1,5 @@
+class: CourseAnnouncementInfo
+fields:
+  body: String
+  author: String?
+  publishedAt: DateTime?

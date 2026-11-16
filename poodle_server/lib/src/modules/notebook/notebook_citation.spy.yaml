@@ -1,0 +1,9 @@
+class: NotebookCitation
+fields:
+  chunkId: UuidValue
+  sourceId: UuidValue
+  sourceVersionId: UuidValue
+  sourceVersion: int
+  title: String
+  locationLabel: String?
+  pageNumber: int?

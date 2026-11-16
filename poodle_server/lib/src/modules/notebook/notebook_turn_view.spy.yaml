@@ -1,0 +1,9 @@
+class: NotebookTurnView
+fields:
+  id: UuidValue
+  role: String
+  content: String
+  citations: List<NotebookCitation>
+  insufficientEvidence: bool
+  stale: bool
+  createdAt: DateTime

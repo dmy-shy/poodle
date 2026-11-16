@@ -1,0 +1,13 @@
+class: CourseSectionRecord
+serverOnly: true
+table: poodle_course_section
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  course: CourseRecord?, relation(onDelete=Cascade)
+  title: String
+  description: String?
+  sortOrder: int
+  published: bool, default=false
+indexes:
+  poodle_section_order:
+    fields: courseId, sortOrder

@@ -1,0 +1,6 @@
+class: NotebookStudioRequest
+fields:
+  notebookId: UuidValue
+  kind: String
+  language: String
+  requestKey: String

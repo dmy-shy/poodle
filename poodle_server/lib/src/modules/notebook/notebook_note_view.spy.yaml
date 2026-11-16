@@ -1,0 +1,7 @@
+class: NotebookNoteView
+fields:
+  id: UuidValue
+  turnId: UuidValue
+  content: String
+  stale: bool
+  createdAt: DateTime

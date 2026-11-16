@@ -1,0 +1,10 @@
+class: AccessGrantAudit
+serverOnly: true
+table: poodle_access_grant_audit
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  actorId: UuidValue?
+  subjectEmail: String
+  universityId: UuidValue?
+  action: String
+  createdAt: DateTime, default=now

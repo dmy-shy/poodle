@@ -1,0 +1,11 @@
+class: NotebookSourceInfo
+fields:
+  id: UuidValue
+  title: String
+  format: String
+  status: String
+  selected: bool
+  teacherDefault: bool
+  currentVersion: int
+  failureCode: String?
+  privateUpload: bool, default=false

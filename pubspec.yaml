@@ -1,0 +1,12 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: '^3.12.2'
+
+workspace:
+  - poodle_client
+  - poodle_server
+  - poodle_flutter
+  - poodle_worker
+

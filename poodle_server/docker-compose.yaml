@@ -1,0 +1,30 @@
+services:
+  # Development services
+  postgres:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "8090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: poodle
+      POSTGRES_PASSWORD: ${SERVERPOD_PASSWORD_database:?Set SERVERPOD_PASSWORD_database in your environment or ignored .env file}
+    volumes:
+      - poodle_data:/var/lib/postgresql/data
+
+
+  # Test services
+  postgres_test:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "9090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: poodle_test
+      POSTGRES_PASSWORD: ${POODLE_DOCKER_TEST_DATABASE_PASSWORD:?Set POODLE_DOCKER_TEST_DATABASE_PASSWORD in your environment or ignored .env file}
+    volumes:
+      - poodle_test_data:/var/lib/postgresql/data
+
+
+volumes:
+  poodle_data:
+  poodle_test_data:

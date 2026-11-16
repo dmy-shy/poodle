@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serverpod migration reference</title>
+  <link rel="stylesheet" href="../assets/learning.css">
+</head>
+<body><main>
+  <nav><a href="../lessons/0002-course-database-migration.html">Course migration lesson</a><a href="flutter-tdd.html">Flutter TDD reference</a></nav>
+  <p class="eyebrow">Poodle · Quick reference</p>
+  <h1>Models → migrations → tables</h1>
+  <table>
+    <thead><tr><th scope="col">Term</th><th scope="col">Meaning</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Model</th><td>The .spy.yaml description of data.</td></tr>
+      <tr><th scope="row">Target schema</th><td>The tables, columns, and constraints the generated application expects.</td></tr>
+      <tr><th scope="row">Migration</th><td>A saved set of SQL operations advancing the database schema.</td></tr>
+      <tr><th scope="row">Apply</th><td>Execute a migration against a particular database.</td></tr>
+      <tr><th scope="row">Repair</th><td>Reconcile an actual database with the saved migration schema after drift.</td></tr>
+    </tbody>
+  </table>
+  <h2>Choose the missing step</h2>
+  <ul>
+    <li>New model tables absent from saved migrations: create a normal migration.</li>
+    <li>A saved migration has not run on this database: apply pending migrations.</li>
+    <li>The database differs from the already applied saved schema: investigate drift and consider repair.</li>
+  </ul>
+  <p>Read the <a href="https://docs.serverpod.dev/concepts/data-and-the-database/database/migrations">official migration guide</a> for the comparison and repair rules.</p>
+  <h2>Interactive development session</h2>
+  <p>In <code>serverpod start</code>, lowercase <kbd>m</kbd> creates and applies a normal migration; <kbd>a</kbd> retries pending application; <kbd>r</kbd> restarts in default watch mode; <kbd>h</kbd> shows help. See <a href="https://docs.serverpod.dev/concepts/server-fundamentals/running-your-server">official keyboard shortcuts</a>.</p>
+  <div class="callout">For Poodle’s course warning, inspect the migration history first. A repair cannot substitute for an unsaved course migration.</div>
+  <footer>Ask the agent to explain an unexpected migration result before choosing the next operation.</footer>
+</main></body>
+</html>

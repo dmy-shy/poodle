@@ -1,0 +1,11 @@
+class: StudentGradeRow
+fields:
+  courseId: UuidValue
+  courseTitle: String
+  activityId: UuidValue
+  activityTitle: String
+  kind: String
+  status: String
+  points: double?
+  maximum: double?
+  feedback: String?

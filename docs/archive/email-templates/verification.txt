@@ -1,0 +1,29 @@
+Phase A verification
+PASS: six template contracts and preview substitution.
+PASS: 12 browser screenshots, 390/800 px, no horizontal overflow.
+PASS: all 12 layouts at 200% text size, no horizontal overflow.
+No remote images or fonts; essential content is text.
+Visual spot review: English reset mobile, Ukrainian change desktop.
+Browser rendering only; Gmail/Outlook inbox acceptance pending approval/publication.
+Backend/Flutter TDD slices remain blocked pending explicit design approval.
+
+2026-11-15 logo revision: main PNG copied unchanged from Flutter assets.
+PASS: red/green LOGO_URL contract validation.
+PASS: regenerated 12 screenshots, image decoded, no horizontal overflow.
+Previous enlarged-text checks predate this logo revision. Approval still pending.
+
+2026-11-15 Resend setup
+PASS: all six templates imported and published; status and aliases verified in table view.
+PASS: sender, purpose-specific subject, concise preview, and hosted main logo configured.
+PASS: body centered in dashboard for all six templates.
+Evidence: ../output/playwright/email-templates/resend-published.jpg
+No inbox sends performed. Backend integration and inbox acceptance remain pending.
+
+2026-11-15 server integration
+PASS: 60 server unit and affected auth integration tests.
+PASS: 37 Flutter gateway, repository and live auth flow tests.
+PASS: changed server/Flutter source analysis; formatting.
+PASS: Serverpod MCP hot restart; server compiled and restarted.
+Runtime logs show a browser refresh warning for ext.relic.notifyStaticChange, with no server compilation failure.
+Actual inbox rendering/provider acceptance is still pending. Tests intercept the external HTTP boundary.
+See SERVER-INTEGRATION.txt for deployment and verification details.

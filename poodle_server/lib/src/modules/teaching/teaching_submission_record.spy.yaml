@@ -1,0 +1,20 @@
+class: TeachingSubmissionRecord
+serverOnly: true
+table: poodle_teaching_submission
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  activityId: UuidValue
+  ownerId: UuidValue
+  requestKey: String
+  text: String
+  uploadId: UuidValue?
+  submittedAt: DateTime
+  reopenUntil: DateTime?
+  grade: double?
+  feedback: String, default=''
+  gradedBy: UuidValue?
+  published: bool, default=false
+indexes:
+  poodle_teaching_submission_unique:
+    fields: ownerId, requestKey
+    unique: true

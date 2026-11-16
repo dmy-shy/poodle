@@ -1,0 +1,8 @@
+class: AdminOverview
+fields:
+  accounts: int
+  students: int
+  teachers: int
+  admins: int
+  courses: int
+  pendingInvitations: int

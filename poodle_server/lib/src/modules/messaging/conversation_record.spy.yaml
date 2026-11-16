@@ -1,0 +1,17 @@
+class: ConversationRecord
+serverOnly: true
+table: poodle_conversation
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  firstParticipantId: UuidValue
+  secondParticipantId: UuidValue
+  createdAt: DateTime, defaultModel=now
+  updatedAt: DateTime, defaultModel=now
+indexes:
+  poodle_conversation_pair_unique:
+    fields: firstParticipantId, secondParticipantId
+    unique: true
+  poodle_conversation_first:
+    fields: firstParticipantId
+  poodle_conversation_second:
+    fields: secondParticipantId

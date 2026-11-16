@@ -1,0 +1,5 @@
+class: NotebookMaterialOption
+fields:
+  id: UuidValue
+  title: String
+  format: String

@@ -1,0 +1,14 @@
+class: NotebookUsageMonthRecord
+serverOnly: true
+table: poodle_notebook_usage_month
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  monthUtc: DateTime
+  spentMicros: int, default=0
+  reservedMicros: int, default=0
+  capMicros: int, default=10000000
+  updatedAt: DateTime, default=now
+indexes:
+  poodle_notebook_usage_month_unique:
+    fields: monthUtc
+    unique: true

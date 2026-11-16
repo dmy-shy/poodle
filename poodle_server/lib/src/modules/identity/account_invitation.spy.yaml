@@ -1,0 +1,21 @@
+### Single-use, email-bound invitation for platform, university or course access.
+class: AccountInvitation
+serverOnly: true
+table: poodle_account_invitation
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  email: String
+  purpose: String
+  university: UniversityRecord?, relation(optional, onDelete=Restrict)
+  course: CourseRecord?, relation(optional, onDelete=Restrict)
+  issuer: module:serverpod_auth_core:AuthUser?, relation(optional, onDelete=Restrict)
+  createdAt: DateTime, defaultModel=now
+  expiresAt: DateTime
+  acceptedAt: DateTime?
+  acceptedBy: module:serverpod_auth_core:AuthUser?, relation(optional, onDelete=SetNull)
+  revokedAt: DateTime?
+indexes:
+  poodle_account_invitation_email:
+    fields: email
+  poodle_account_invitation_created:
+    fields: createdAt

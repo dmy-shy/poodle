@@ -1,0 +1,9 @@
+class: AdminDirectoryRow
+fields:
+  id: String
+  label: String
+  student: bool, default=false
+  teacher: bool, default=false
+  admin: bool, default=false
+  students: int, default=0
+  teachers: int, default=0

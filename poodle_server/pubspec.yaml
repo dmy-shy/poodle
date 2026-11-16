@@ -1,0 +1,79 @@
+name: poodle_server
+description: Starting point for a Serverpod server.
+# version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '^3.12.2'
+
+resolution: workspace
+
+dependencies:
+  serverpod: 4.0.4
+  serverpod_auth_idp_server: 4.0.4
+  serverpod_cloud_storage: 4.0.4
+  crypto: ^3.0.6
+  http: 1.6.0
+
+dev_dependencies:
+  dart_jsonwebtoken: 3.4.1
+  lints: '>=3.0.0 <7.0.0'
+  serverpod_test: 4.0.4
+  test: ^1.25.5
+
+serverpod:
+  scripts:
+    # Build the Flutter web app and copy it to the server's web directory.
+    # Windows uses xcopy since flutter's --output flag doesn't work there.
+    # See: https://github.com/flutter/flutter/issues/157886
+    # On failure, clean and retry once to clear stale Flutter build caches.
+    flutter_build:
+      windows: >-
+        (if exist web\app rmdir /S /Q web\app)
+        & cd /D ..\poodle_flutter
+        & set ARGS=web --base-href /
+        && (call flutter build %ARGS% || (flutter clean && call flutter build %ARGS%))
+        && xcopy /E /I /Y build\web ..\poodle_server\web\app
+      posix: |
+        rm -rf ../poodle_server/web/app
+        cd ../poodle_flutter
+        set -- web --base-href / --output ../poodle_server/web/app
+        flutter build "$@" || { flutter clean && flutter build "$@"; }
+
+  # Companion Flutter apps that `serverpod start` can launch (Ctrl+R), keyed
+  # by a display alias. The default device is the web server, opening the
+  # machine's default browser when ready. All non-reserved properties are
+  # forwarded to `flutter run`. For the best IDE debugging experience, use
+  # `chrome` or a native target as the device. See the example below:
+  #
+  # Admin:
+  #   path: ../apps/admin_flutter
+  #   displayName: "Admin app"
+  #   auto_launch: true
+  #   device: chrome
+  #   target: lib/main.dart
+  #   web-hostname: 0.0.0.0
+  #   web-port: 8090
+  #   release: true
+  #   pub: false
+  #   dart-define:
+  #     API_URL=https://admin.example.com
+  #     FLAVOR=production
+  flutter_apps:
+    poodle:
+      path: ../poodle_flutter
+      displayName: "Poodle app"
+      auto_launch: true
+      target: lib/driver.dart
+    poodle_android:
+      path: ../poodle_flutter
+      displayName: "Poodle Android acceptance"
+      auto_launch: false
+      device: emulator-5554
+      target: lib/driver.dart
+    poodle_ios:
+      path: ../poodle_flutter
+      displayName: "Poodle iOS acceptance"
+      auto_launch: false
+      device: 6C60F541-E52A-452C-B0C3-B5D94AB1D4DA
+      target: lib/driver.dart

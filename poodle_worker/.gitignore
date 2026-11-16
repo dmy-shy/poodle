@@ -1,0 +1,9 @@
+# Dart tooling and verification output (shared rules also apply from the root)
+.dart_tool/
+build/
+coverage/
+
+# Downloaded ClamAV databases
+.clamav/
+
+# Local .env files are ignored at the root; keep .env.example as setup guidance.

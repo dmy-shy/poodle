@@ -1,0 +1,60 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    # Disposable CI databases only; never use these values outside tests.
+    env:
+      SERVERPOD_PASSWORD_database: 'poodle-ci-database-only'
+      SERVERPOD_PASSWORD_redis: 'poodle-ci-redis-only'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.4'
+
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Install document extraction tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils tesseract-ocr-eng tesseract-ocr-uk ffmpeg
+
+      - name: Flutter tests
+        working-directory: poodle_flutter
+        run: flutter test --coverage
+
+      - name: Calendar browser regressions
+        if: ${{ !cancelled() }}
+        working-directory: poodle_flutter
+        run: flutter test --platform chrome test/unit/data/calendar_repository_offline_test.dart
+
+      - name: Server tests
+        if: ${{ !cancelled() }}
+        working-directory: poodle_server
+        run: dart test --coverage=coverage
+
+      - name: Worker tests
+        if: ${{ !cancelled() }}
+        working-directory: poodle_worker
+        run: dart test --coverage=coverage
+
+      - name: Upload coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poodle-coverage
+          path: |
+            poodle_flutter/coverage/
+            poodle_server/coverage/
+            poodle_worker/coverage/

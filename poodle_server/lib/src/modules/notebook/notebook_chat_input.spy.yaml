@@ -1,0 +1,5 @@
+class: NotebookChatInput
+fields:
+  notebookId: UuidValue
+  requestKey: String
+  question: String

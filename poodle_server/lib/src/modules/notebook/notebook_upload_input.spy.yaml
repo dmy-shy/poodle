@@ -1,0 +1,8 @@
+# Metadata for an owner-bound private upload.
+class: NotebookUploadInput
+fields:
+  notebookId: UuidValue
+  fileName: String
+  sizeBytes: int
+  checksum: String
+  requestKey: String

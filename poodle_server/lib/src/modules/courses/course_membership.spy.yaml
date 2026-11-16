@@ -1,0 +1,13 @@
+class: CourseMembership
+serverOnly: true
+table: poodle_course_membership
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  course: CourseRecord?, relation(onDelete=Cascade)
+  authUser: module:serverpod_auth_core:AuthUser?, relation(onDelete=Cascade)
+  role: String
+  active: bool, default=true
+indexes:
+  poodle_membership_unique:
+    fields: courseId, authUserId
+    unique: true

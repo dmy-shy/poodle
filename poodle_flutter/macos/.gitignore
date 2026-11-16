@@ -1,0 +1,18 @@
+# Flutter-related
+**/Flutter/ephemeral/
+**/Pods/
+
+# Xcode-related
+**/dgph
+**/xcuserdata/
+
+# CocoaPods symlinks and Swift package build output
+**/.symlinks/
+**/.build/
+
+# Local Xcode build output and user state
+**/DerivedData/
+*.xcuserstate
+
+# Xcode-generated workspace warning state
+**/IDEWorkspaceChecks.plist

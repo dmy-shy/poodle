@@ -1,0 +1,4 @@
+class: NotebookAssessmentSetup
+fields:
+  configuration: NotebookAssessmentConfigView
+  materials: List<NotebookMaterialOption>

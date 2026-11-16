@@ -1,0 +1,6 @@
+class: SearchResponse
+fields:
+  results: List<SearchHit>
+  keywordOnly: bool
+  incomplete: bool
+  capped: bool

@@ -1,0 +1,15 @@
+class: NotebookNoteRecord
+serverOnly: true
+table: poodle_notebook_note
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  notebookId: UuidValue
+  ownerUserId: UuidValue
+  turnId: UuidValue
+  content: String
+  sourceRevision: int
+  createdAt: DateTime, default=now
+indexes:
+  poodle_notebook_note_turn:
+    fields: notebookId, ownerUserId, turnId
+    unique: true

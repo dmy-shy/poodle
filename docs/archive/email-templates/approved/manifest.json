@@ -1,0 +1,178 @@
+{
+  "status": "design_approved_awaiting_resend_publication",
+  "templates": [
+    {
+      "purpose": "registration",
+      "locale": "en",
+      "alias": "poodle-registration-en",
+      "html": "templates/poodle-registration-en.html",
+      "text": "templates/poodle-registration-en.txt",
+      "subject": "Verify your email — Poodle",
+      "preview_text": "You requested a code to join Poodle by invitation. Use it to verify your email before creating your account.",
+      "variables": [
+        {
+          "key": "CODE",
+          "type": "string"
+        },
+        {
+          "key": "EXPIRES_AT_UTC",
+          "type": "string"
+        },
+        {
+          "key": "LOGO_URL",
+          "type": "string"
+        }
+      ],
+      "sample_variables": {
+        "CODE": "01234567",
+        "EXPIRES_AT_UTC": "2026-11-10 12:15",
+        "LOGO_URL": "../assets/poodle-logo.png"
+      }
+    },
+    {
+      "purpose": "password-reset",
+      "locale": "en",
+      "alias": "poodle-password-reset-en",
+      "html": "templates/poodle-password-reset-en.html",
+      "text": "templates/poodle-password-reset-en.txt",
+      "subject": "Reset your password — Poodle",
+      "preview_text": "You requested a password reset for your Poodle account. Use this code to verify the request, then choose a new password.",
+      "variables": [
+        {
+          "key": "CODE",
+          "type": "string"
+        },
+        {
+          "key": "EXPIRES_AT_UTC",
+          "type": "string"
+        },
+        {
+          "key": "LOGO_URL",
+          "type": "string"
+        }
+      ],
+      "sample_variables": {
+        "CODE": "01234567",
+        "EXPIRES_AT_UTC": "2026-11-10 12:15",
+        "LOGO_URL": "../assets/poodle-logo.png"
+      }
+    },
+    {
+      "purpose": "email-change",
+      "locale": "en",
+      "alias": "poodle-email-change-en",
+      "html": "templates/poodle-email-change-en.html",
+      "text": "templates/poodle-email-change-en.txt",
+      "subject": "Confirm your new email — Poodle",
+      "preview_text": "You requested to change the email address for your Poodle account. This code confirms that you can access the new address.",
+      "variables": [
+        {
+          "key": "CODE",
+          "type": "string"
+        },
+        {
+          "key": "EXPIRES_AT_UTC",
+          "type": "string"
+        },
+        {
+          "key": "LOGO_URL",
+          "type": "string"
+        }
+      ],
+      "sample_variables": {
+        "CODE": "01234567",
+        "EXPIRES_AT_UTC": "2026-11-10 12:15",
+        "LOGO_URL": "../assets/poodle-logo.png"
+      }
+    },
+    {
+      "purpose": "registration",
+      "locale": "uk",
+      "alias": "poodle-registration-uk",
+      "html": "templates/poodle-registration-uk.html",
+      "text": "templates/poodle-registration-uk.txt",
+      "subject": "Підтвердьте електронну пошту — Poodle",
+      "preview_text": "Ви запросили код, щоб приєднатися до Poodle за запрошенням. Підтвердьте електронну пошту, перш ніж створити обліковий запис.",
+      "variables": [
+        {
+          "key": "CODE",
+          "type": "string"
+        },
+        {
+          "key": "EXPIRES_AT_UTC",
+          "type": "string"
+        },
+        {
+          "key": "LOGO_URL",
+          "type": "string"
+        }
+      ],
+      "sample_variables": {
+        "CODE": "01234567",
+        "EXPIRES_AT_UTC": "2026-11-10 12:15",
+        "LOGO_URL": "../assets/poodle-logo.png"
+      }
+    },
+    {
+      "purpose": "password-reset",
+      "locale": "uk",
+      "alias": "poodle-password-reset-uk",
+      "html": "templates/poodle-password-reset-uk.html",
+      "text": "templates/poodle-password-reset-uk.txt",
+      "subject": "Скиньте пароль — Poodle",
+      "preview_text": "Ви запросили скидання пароля облікового запису Poodle. Підтвердьте запит цим кодом, а потім створіть новий пароль.",
+      "variables": [
+        {
+          "key": "CODE",
+          "type": "string"
+        },
+        {
+          "key": "EXPIRES_AT_UTC",
+          "type": "string"
+        },
+        {
+          "key": "LOGO_URL",
+          "type": "string"
+        }
+      ],
+      "sample_variables": {
+        "CODE": "01234567",
+        "EXPIRES_AT_UTC": "2026-11-10 12:15",
+        "LOGO_URL": "../assets/poodle-logo.png"
+      }
+    },
+    {
+      "purpose": "email-change",
+      "locale": "uk",
+      "alias": "poodle-email-change-uk",
+      "html": "templates/poodle-email-change-uk.html",
+      "text": "templates/poodle-email-change-uk.txt",
+      "subject": "Підтвердьте нову адресу — Poodle",
+      "preview_text": "Ви запросили зміну електронної пошти облікового запису Poodle. Цей код підтверджує, що ви маєте доступ до нової адреси.",
+      "variables": [
+        {
+          "key": "CODE",
+          "type": "string"
+        },
+        {
+          "key": "EXPIRES_AT_UTC",
+          "type": "string"
+        },
+        {
+          "key": "LOGO_URL",
+          "type": "string"
+        }
+      ],
+      "sample_variables": {
+        "CODE": "01234567",
+        "EXPIRES_AT_UTC": "2026-11-10 12:15",
+        "LOGO_URL": "../assets/poodle-logo.png"
+      }
+    }
+  ],
+  "approval": {
+    "date": "2026-11-15",
+    "design": "Main asset logo; no dark header",
+    "source": "Explicit user approval in chat"
+  }
+}

@@ -1,0 +1,15 @@
+class: TeachingAttemptRecord
+serverOnly: true
+table: poodle_teaching_attempt
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  activityId: UuidValue
+  ownerId: UuidValue
+  versionId: UuidValue
+  questions: List<TeachingQuestion>
+  answers: List<int>
+  startedAt: DateTime
+  expiresAt: DateTime
+  submittedAt: DateTime?
+  score: double?
+  maxPoints: double

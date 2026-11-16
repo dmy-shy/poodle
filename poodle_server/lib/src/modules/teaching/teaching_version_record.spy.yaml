@@ -1,0 +1,13 @@
+class: TeachingVersionRecord
+serverOnly: true
+table: poodle_teaching_version
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  activityId: UuidValue
+  revision: int
+  settings: TeachingSettings
+  questions: List<TeachingQuestion>
+indexes:
+  poodle_teaching_version_unique:
+    fields: activityId, revision
+    unique: true

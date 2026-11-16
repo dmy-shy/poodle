@@ -1,0 +1,8 @@
+class: TeachingCourseView
+fields:
+  courseId: UuidValue
+  title: String
+  pendingGrades: int
+  drafts: int
+  unreleasedTests: int
+  upcomingDeadlines: List<DateTime>

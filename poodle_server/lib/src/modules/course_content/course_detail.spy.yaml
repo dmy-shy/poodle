@@ -1,0 +1,6 @@
+class: CourseDetail
+fields:
+  course: CourseSummary
+  sections: List<CourseSection>
+  teacherView: bool
+  serverTime: DateTime

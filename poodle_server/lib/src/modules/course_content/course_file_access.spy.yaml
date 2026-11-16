@@ -1,0 +1,4 @@
+class: CourseFileAccess
+fields:
+  url: String
+  expiresAt: DateTime

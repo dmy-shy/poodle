@@ -1,0 +1,16 @@
+class: SearchIndexJob
+serverOnly: true
+table: poodle_search_index_job
+fields:
+  fingerprint: String
+  targetId: UuidValue
+  attempts: int, default=0
+  state: String, default='queued'
+  availableAt: DateTime, default=now
+  leaseUntil: DateTime?
+indexes:
+  poodle_search_job_unique:
+    fields: fingerprint
+    unique: true
+  poodle_search_job_pending:
+    fields: state, availableAt

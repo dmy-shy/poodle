@@ -1,0 +1,29 @@
+name: Format
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.4'
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Check formatting
+        run: |
+          find poodle_flutter/lib poodle_flutter/test poodle_server/bin poodle_server/lib poodle_server/test poodle_worker/bin poodle_worker/lib poodle_worker/test \
+            -name '*.dart' ! -path '*/generated/*' ! -name 'app_localizations*.dart' ! -name 'serverpod_test_tools.dart' \
+            -print0 | xargs -0 dart format --output=none --set-exit-if-changed
+      - name: Check documentation links
+        run: python3 tool/check_doc_links.py

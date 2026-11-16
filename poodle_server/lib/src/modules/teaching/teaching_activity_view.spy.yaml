@@ -1,0 +1,15 @@
+class: TeachingActivityView
+fields:
+  activityId: UuidValue
+  courseId: UuidValue
+  sectionId: UuidValue
+  kind: String
+  revision: int
+  published: bool
+  released: bool
+  teacher: bool
+  settings: TeachingSettings
+  questions: List<TeachingQuestion>
+  submissions: List<TeachingSubmissionView>
+  attempts: List<TeachingAttemptView>
+  serverTime: DateTime

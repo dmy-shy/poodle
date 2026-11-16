@@ -1,0 +1,26 @@
+class: AdministratorRequestRecord
+serverOnly: true
+table: poodle_administrator_request
+fields:
+  id: UuidValue?, defaultModel=random_v7
+  name: String
+  email: String
+  university: String
+  position: String
+  note: String
+  locale: String
+  status: String, default='unverified'
+  codeHash: String
+  attempts: int, default=0
+  expiresAt: DateTime
+  createdAt: DateTime, defaultModel=now
+  verifiedAt: DateTime?
+  reviewedAt: DateTime?
+  reviewer: module:serverpod_auth_core:AuthUser?, relation(optional, onDelete=Restrict)
+  reviewNote: String?
+  approvedUniversity: UniversityRecord?, relation(optional, onDelete=Restrict)
+indexes:
+  poodle_admin_request_email:
+    fields: email
+  poodle_admin_request_status:
+    fields: status, createdAt

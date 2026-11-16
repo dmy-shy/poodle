@@ -1,0 +1,8 @@
+class: StudentTaskRow
+fields:
+  courseId: UuidValue
+  courseTitle: String
+  activityId: UuidValue
+  activityTitle: String
+  kind: String
+  deadline: DateTime

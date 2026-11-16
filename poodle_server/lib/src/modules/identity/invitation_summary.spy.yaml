@@ -1,0 +1,11 @@
+### Safe admin-facing invitation projection.
+class: InvitationSummary
+fields:
+  id: UuidValue
+  email: String
+  createdAt: DateTime
+  expiresAt: DateTime
+  acceptedAt: DateTime?
+  revokedAt: DateTime?
+  purpose: String, default='teacherCandidate'
+  courseId: UuidValue?

@@ -1,0 +1,13 @@
+class: TeachingSubmissionView
+fields:
+  id: UuidValue
+  ownerId: UuidValue
+  ownerLabel: String
+  text: String
+  fileName: String?
+  submittedAt: DateTime
+  reopenUntil: DateTime?
+  underReview: bool
+  grade: double?
+  feedback: String?
+  published: bool

@@ -1,0 +1,19 @@
+class: NotebookSourceVersionRecord
+serverOnly: true
+table: poodle_notebook_source_version
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  sourceId: UuidValue
+  version: int
+  checksum: String
+  title: String
+  extractedText: String
+  status: String
+  embeddingSpace: String, default='legacy-unidentified'
+  createdAt: DateTime, default=now
+indexes:
+  poodle_notebook_version_unique:
+    fields: sourceId, version
+    unique: true
+  poodle_notebook_version_checksum:
+    fields: checksum

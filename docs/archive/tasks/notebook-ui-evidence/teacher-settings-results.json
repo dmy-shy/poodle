@@ -1,0 +1,25 @@
+{
+  "stage": "Teacher notebook settings",
+  "testedOn": "2026-10-30",
+  "implementation": [
+    "Teacher-only Serverpod assessment setup endpoint",
+    "Published eligible course material selection for module and test scope",
+    "Private upload format policy controls",
+    "English and Ukrainian settings screen",
+    "Revision conflict handling and account-change state protection"
+  ],
+  "verification": {
+    "backendTestsPassed": 63,
+    "focusedFlutterTestsPassed": 28,
+    "finalLayoutWidgetTestsPassed": 3,
+    "changedCodeAnalysis": "No issues found",
+    "migrationRequired": false,
+    "liveDevice": "iPhone 17 simulator, Ukrainian teacher account",
+    "liveSave": "Sample Module 1 configured with original seeded study notes and TXT/MD private upload policy",
+    "persistence": "Selected material and upload formats retained after refresh",
+    "serverLogs": "configureAssessment and subsequent getAssessmentSetup succeeded",
+    "runtimeErrors": "None during acceptance test",
+    "screenshot": "teacher-settings-saved.jpg"
+  },
+  "remainingLimitation": "Private file ingestion still requires valid ClamAV signatures; scanner checks were preserved."
+}

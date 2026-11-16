@@ -1,0 +1,14 @@
+class: SearchHistoryRecord
+serverOnly: true
+table: poodle_search_history
+fields:
+  authUser: module:serverpod_auth_core:AuthUser?, relation(onDelete=Cascade)
+  query: String
+  normalized: String
+  lastUsed: DateTime
+indexes:
+  poodle_search_history_unique:
+    fields: authUserId, normalized
+    unique: true
+  poodle_search_history_expiry:
+    fields: lastUsed

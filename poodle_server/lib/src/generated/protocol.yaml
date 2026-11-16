@@ -1,0 +1,119 @@
+emailIdp:
+  - login:
+  - startRegistration:
+  - startPasswordReset:
+  - googleLogin:
+  - linkGoogle:
+  - verifyRegistrationCode:
+  - finishRegistration:
+  - verifyPasswordResetCode:
+  - finishPasswordReset:
+  - hasAccount:
+jwtRefresh:
+  - refreshAccessToken:
+adminOverview:
+  - summary:
+  - list:
+courseContent:
+  - getCourseContent:
+  - getActivity:
+  - getFileUrl:
+course:
+  - create:
+  - setPublished:
+  - listMyCourses:
+  - getCourse:
+  - setStarred:
+  - setHidden:
+account:
+  - me:
+  - pendingEmailChange:
+  - startEmailChange:
+  - resendEmailChange:
+  - cancelEmailChange:
+  - confirmEmailChange:
+adminInvitations:
+  - list:
+  - create:
+  - revoke:
+administratorRequests:
+  - begin:
+  - verify:
+  - list:
+  - pendingCount:
+  - get:
+  - universities:
+  - approve:
+  - reject:
+  - retryMail:
+universityAccess:
+  - invite:
+  - invitations:
+  - revoke:
+  - members:
+  - setAdministrator:
+messaging:
+  - openSelf:
+  - openPeer:
+  - send:
+  - listConversations:
+  - eligiblePeers:
+  - listMessages:
+  - markRead:
+myFiles:
+  - listUploads:
+notebook:
+  - saveNote:
+  - getNotes:
+  - deleteNote:
+  - getAssessmentSetup:
+  - getCitationPassage:
+  - beginUpload:
+  - finishUpload:
+  - removeUpload:
+  - getTurns:
+  - openNotebook:
+  - configureAssessment:
+  - setSelectedSources:
+  - ask:
+  - getJobStatus:
+  - generateStudioItem:
+  - getStudioJobs:
+  - getStudioItems:
+  - getStudioItem:
+  - getStudioCitationPassage:
+  - getStudioAudioAccess:
+notifications:
+  - list:
+  - unreadCount:
+  - get:
+  - markRead:
+  - markAllRead:
+pushDevices:
+  - register:
+  - unregister:
+search:
+  - search:
+  - listRecent:
+  - saveRecent:
+  - deleteRecent:
+  - clearRecent:
+studentLearning:
+  - listTasks:
+  - listGrades:
+teaching:
+  - dashboard:
+  - members:
+  - listActivities:
+  - getActivity:
+  - saveActivity:
+  - getDefaults:
+  - saveDefaults:
+  - beginUpload:
+  - submitAssignment:
+  - gradeAssignment:
+  - reopenAssignment:
+  - submissionFile:
+  - startTest:
+  - saveAnswers:
+  - releaseTest:

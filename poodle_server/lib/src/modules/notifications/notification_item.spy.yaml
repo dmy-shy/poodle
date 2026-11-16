@@ -1,0 +1,10 @@
+class: NotificationItem
+fields:
+  id: UuidValue
+  category: String
+  courseId: UuidValue?
+  activityId: UuidValue?
+  requestId: UuidValue?
+  title: String
+  createdAt: DateTime
+  readAt: DateTime?

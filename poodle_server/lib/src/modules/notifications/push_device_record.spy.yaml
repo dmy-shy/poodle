@@ -1,0 +1,21 @@
+class: PushDeviceRecord
+serverOnly: true
+table: poodle_push_device
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  installationId: UuidValue
+  registrationId: UuidValue
+  ownerId: UuidValue
+  platform: String
+  token: String
+  createdAt: DateTime, defaultModel=now
+  updatedAt: DateTime, defaultModel=now
+indexes:
+  poodle_push_installation_unique:
+    fields: installationId
+    unique: true
+  poodle_push_token_unique:
+    fields: token
+    unique: true
+  poodle_push_owner:
+    fields: ownerId

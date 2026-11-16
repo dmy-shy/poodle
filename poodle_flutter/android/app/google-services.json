@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "758071662046",
+    "project_id": "poodle-app-88e23",
+    "storage_bucket": "poodle-app-88e23.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758071662046:android:9f7ca58463074911abf94f",
+        "android_client_info": {
+          "package_name": "com.plur.poodle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA60896oBhJPjcf6SQCZR5GeKiBopk_rMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

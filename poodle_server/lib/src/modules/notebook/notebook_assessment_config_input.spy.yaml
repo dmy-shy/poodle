@@ -1,0 +1,7 @@
+class: NotebookAssessmentConfigInput
+fields:
+  courseId: UuidValue
+  assessmentActivityId: UuidValue
+  expectedRevision: int
+  defaultMaterialActivityIds: List<UuidValue>
+  allowedFormats: List<String>

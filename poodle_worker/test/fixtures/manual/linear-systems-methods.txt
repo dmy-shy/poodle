@@ -1,0 +1,41 @@
+Synthetic study fixture for the private notebook end-to-end test. It contains no personal data.
+
+1. A linear equation in x and y has the form ax + by = c, where a, b, and c are constants. A solution to a system is a pair of numbers that satisfies every equation at once. To verify a proposed pair, substitute it into each original equation, not only into a transformed equation.
+
+2. Addition and subtraction preserve equality when the same expression is applied to both sides. Multiplying both sides by the same nonzero number also preserves the solution set. Multiplying an equation by zero destroys information and is not an allowed elimination step.
+
+3. To use elimination, first align like variables. If the x coefficients are opposites, add the equations to remove x. If the x coefficients are equal, subtract one equation from the other. You can also multiply one or both equations by nonzero constants to make a pair of coefficients cancel.
+
+4. For x + y = 5 and 2x - y = 1, add the equations to get 3x = 6. Thus x = 2. Substitute x = 2 into x + y = 5 to obtain y = 3. Check: 2 + 3 = 5 and 2(2) - 3 = 1.
+
+5. For 2x + 3y = 12 and x - y = 1, multiply the second equation by -2 to get -2x + 2y = -2. Add it to the first equation: 5y = 10, so y = 2. Substitution into x - y = 1 gives x = 3. Both original equations then hold.
+
+6. Substitution is useful when one equation already isolates a variable. For y = 2x + 1 and x + y = 10, replace y in the second equation to get x + 2x + 1 = 10. Hence x = 3 and y = 7. The pair (3, 7) satisfies both equations.
+
+7. A unique solution appears when two nonparallel lines intersect at one point. For 2x + y = 8 and x - y = 1, adding the equations gives 3x = 9. The unique solution is x = 3, y = 2. On a graph, that pair is the intersection point.
+
+8. An inconsistent system has no solution. For x + y = 3 and 2x + 2y = 8, doubling the first equation yields 2x + 2y = 6, which conflicts with 2x + 2y = 8. Elimination therefore produces the contradiction 0 = 2. The two lines are parallel and distinct.
+
+9. A dependent system has infinitely many solutions. For x + y = 3 and 2x + 2y = 6, the second equation is exactly twice the first. Elimination produces 0 = 0. Every pair on the line x + y = 3 solves the system, such as (0, 3) and (1, 2).
+
+10. A zero row in an augmented matrix represents 0 = 0 and adds no constraint. A row with zero coefficients but a nonzero right side represents a contradiction. These two cases should not be confused: the first can occur in a consistent dependent system, while the second proves inconsistency.
+
+11. In matrix notation, the coefficients of a system form matrix A, the unknown values form vector x, and the constants form vector b. The compact equation is Ax = b. An augmented matrix places the constants beside the coefficient columns so row operations can be recorded without rewriting variable names at each step.
+
+12. Swapping two rows, multiplying one row by a nonzero scalar, and adding a multiple of one row to another row are the three elementary row operations. Each operation preserves the solution set of the system. Gaussian elimination uses them to create zeros below successive pivot positions.
+
+13. A pivot is the first nonzero entry of a nonzero row after earlier columns have been cleared. A matrix is in row echelon form when each pivot lies to the right of the pivot above it and all entries below a pivot are zero. Back substitution then solves the last pivot variable first and proceeds upward.
+
+14. A free variable corresponds to a nonpivot column. If a consistent system has fewer pivots than unknowns, free variables can take arbitrary values and the system has infinitely many solutions. The number of independent pivots is the rank of the coefficient matrix.
+
+15. The determinant of a 2-by-2 coefficient matrix [[a, b], [c, d]] is ad - bc. If this determinant is nonzero, the two-equation system has a unique solution. A zero determinant means the equations are either dependent or inconsistent; inspect the constants to decide which.
+
+16. For a word problem, define unknown quantities and units before writing equations. Translate each independent condition into one equation, solve the system, then verify the resulting numbers in the original story. A negative answer may be algebraically valid but impossible for a quantity such as a count of students.
+
+17. For 2 adult tickets and 3 student tickets costing 39 units, and 1 adult ticket plus 2 student tickets costing 23 units, let a and s denote the two prices. The equations are 2a + 3s = 39 and a + 2s = 23. Double the second and subtract the first: s = 7. Then a = 9. Check both totals.
+
+18. Rounding intermediate results can spoil a final check. Keep exact fractions during elimination whenever possible and round only the final requested values. If a coefficient is zero, select a different pivot row rather than dividing by zero.
+
+19. When solving three equations in three unknowns, eliminate one variable from two pairs of equations to obtain a two-variable system. Solve that smaller system and substitute the answers into an original equation for the third variable. Verify the triple in all three starting equations.
+
+20. A useful final checklist is: identify unknowns, build all equations, choose elimination or substitution, preserve equality in each step, classify unique/no/infinite solutions, and verify every reported value in every original condition. A correct intermediate calculation does not replace the final verification.

@@ -1,0 +1,164 @@
+# Refactor inventory
+
+Documentation, supporting evidence, and manual fixtures relocated together.
+
+| Previous path | New path |
+| --- | --- |
+| `ARCHITECTURE.md` | `docs/architecture/ARCHITECTURE.md` |
+| `CAPABILITY-MAP-backend.md` | `docs/architecture/CAPABILITY-MAP-backend.md` |
+| `DESIGN.md` | `docs/architecture/DESIGN.md` |
+| `MISSION.md` | `docs/archive/learning/MISSION.md` |
+| `NOTIFICATIONS-IMPLEMENTATION-STATUS.md` | `docs/status/NOTIFICATIONS-IMPLEMENTATION-STATUS.md` |
+| `OFFLINE.md` | `docs/architecture/OFFLINE.md` |
+| `RESOURCES.md` | `docs/archive/learning/RESOURCES.md` |
+| `SPEC-backend-platform.md` | `docs/specs/SPEC-backend-platform.md` |
+| `SPEC-course-view.md` | `docs/specs/SPEC-course-view.md` |
+| `SPEC-google-auth-extension.md` | `docs/specs/SPEC-google-auth-extension.md` |
+| `SPEC-home-preview.md` | `docs/specs/SPEC-home-preview.md` |
+| `SPEC-identity-access.md` | `docs/specs/SPEC-identity-access.md` |
+| `SPEC-in-app-links.md` | `docs/specs/SPEC-in-app-links.md` |
+| `SPEC-ios-tab-bar.md` | `docs/specs/SPEC-ios-tab-bar.md` |
+| `SPEC-onboarding.md` | `docs/specs/SPEC-onboarding.md` |
+| `STATUS.md` | `docs/status/STATUS.md` |
+| `TESTING.md` | `docs/development/TESTING.md` |
+| `assets/learning.css` | `docs/archive/learning/assets/learning.css` |
+| `assets/quiz.js` | `docs/archive/learning/assets/quiz.js` |
+| `email_templates/README.txt` | `docs/archive/email-templates/readme.txt` |
+| `email_templates/SERVER-INTEGRATION.txt` | `docs/guides/email-server-integration.md` |
+| `email_templates/UPLOAD-INSTRUCTIONS.txt` | `docs/archive/email-templates/upload-instructions.txt` |
+| `email_templates/poodle-resend-approved/UPLOAD-INSTRUCTIONS.txt` | `docs/archive/email-templates/approved/UPLOAD-INSTRUCTIONS.txt` |
+| `email_templates/poodle-resend-approved/assets/poodle-logo.png` | `docs/archive/email-templates/approved/assets/poodle-logo.png` |
+| `email_templates/poodle-resend-approved/manifest.json` | `docs/archive/email-templates/approved/manifest.json` |
+| `email_templates/poodle-resend-approved/templates/poodle-email-change-en.html` | `docs/archive/email-templates/approved/templates/poodle-email-change-en.html` |
+| `email_templates/poodle-resend-approved/templates/poodle-email-change-en.txt` | `docs/archive/email-templates/approved/templates/poodle-email-change-en.txt` |
+| `email_templates/poodle-resend-approved/templates/poodle-email-change-uk.html` | `docs/archive/email-templates/approved/templates/poodle-email-change-uk.html` |
+| `email_templates/poodle-resend-approved/templates/poodle-email-change-uk.txt` | `docs/archive/email-templates/approved/templates/poodle-email-change-uk.txt` |
+| `email_templates/poodle-resend-approved/templates/poodle-password-reset-en.html` | `docs/archive/email-templates/approved/templates/poodle-password-reset-en.html` |
+| `email_templates/poodle-resend-approved/templates/poodle-password-reset-en.txt` | `docs/archive/email-templates/approved/templates/poodle-password-reset-en.txt` |
+| `email_templates/poodle-resend-approved/templates/poodle-password-reset-uk.html` | `docs/archive/email-templates/approved/templates/poodle-password-reset-uk.html` |
+| `email_templates/poodle-resend-approved/templates/poodle-password-reset-uk.txt` | `docs/archive/email-templates/approved/templates/poodle-password-reset-uk.txt` |
+| `email_templates/poodle-resend-approved/templates/poodle-registration-en.html` | `docs/archive/email-templates/approved/templates/poodle-registration-en.html` |
+| `email_templates/poodle-resend-approved/templates/poodle-registration-en.txt` | `docs/archive/email-templates/approved/templates/poodle-registration-en.txt` |
+| `email_templates/poodle-resend-approved/templates/poodle-registration-uk.html` | `docs/archive/email-templates/approved/templates/poodle-registration-uk.html` |
+| `email_templates/poodle-resend-approved/templates/poodle-registration-uk.txt` | `docs/archive/email-templates/approved/templates/poodle-registration-uk.txt` |
+| `email_templates/verification.txt` | `docs/archive/email-templates/verification.txt` |
+| `learning-records/0001-first-widget-tdd-cycle.md` | `docs/archive/learning/learning-records/0001-first-widget-tdd-cycle.md` |
+| `lessons/0001-splash-screen-tdd.html` | `docs/archive/learning/lessons/0001-splash-screen-tdd.html` |
+| `lessons/0002-course-database-migration.html` | `docs/archive/learning/lessons/0002-course-database-migration.html` |
+| `output/playwright/email-templates/accessibility-uk-200.png` | `docs/archive/email-templates/evidence/accessibility-uk-200.png` |
+| `output/playwright/email-templates/poodle-administrator-request-en-390.png` | `docs/archive/email-templates/evidence/poodle-administrator-request-en-390.png` |
+| `output/playwright/email-templates/poodle-administrator-request-en-800.png` | `docs/archive/email-templates/evidence/poodle-administrator-request-en-800.png` |
+| `output/playwright/email-templates/poodle-administrator-request-uk-390.png` | `docs/archive/email-templates/evidence/poodle-administrator-request-uk-390.png` |
+| `output/playwright/email-templates/poodle-administrator-request-uk-800.png` | `docs/archive/email-templates/evidence/poodle-administrator-request-uk-800.png` |
+| `output/playwright/email-templates/poodle-email-change-en-390.png` | `docs/archive/email-templates/evidence/poodle-email-change-en-390.png` |
+| `output/playwright/email-templates/poodle-email-change-en-800.png` | `docs/archive/email-templates/evidence/poodle-email-change-en-800.png` |
+| `output/playwright/email-templates/poodle-email-change-uk-390.png` | `docs/archive/email-templates/evidence/poodle-email-change-uk-390.png` |
+| `output/playwright/email-templates/poodle-email-change-uk-800.png` | `docs/archive/email-templates/evidence/poodle-email-change-uk-800.png` |
+| `output/playwright/email-templates/poodle-password-reset-en-390.png` | `docs/archive/email-templates/evidence/poodle-password-reset-en-390.png` |
+| `output/playwright/email-templates/poodle-password-reset-en-800.png` | `docs/archive/email-templates/evidence/poodle-password-reset-en-800.png` |
+| `output/playwright/email-templates/poodle-password-reset-uk-390.png` | `docs/archive/email-templates/evidence/poodle-password-reset-uk-390.png` |
+| `output/playwright/email-templates/poodle-password-reset-uk-800.png` | `docs/archive/email-templates/evidence/poodle-password-reset-uk-800.png` |
+| `output/playwright/email-templates/poodle-registration-en-390.png` | `docs/archive/email-templates/evidence/poodle-registration-en-390.png` |
+| `output/playwright/email-templates/poodle-registration-en-800.png` | `docs/archive/email-templates/evidence/poodle-registration-en-800.png` |
+| `output/playwright/email-templates/poodle-registration-uk-390.png` | `docs/archive/email-templates/evidence/poodle-registration-uk-390.png` |
+| `output/playwright/email-templates/poodle-registration-uk-800.png` | `docs/archive/email-templates/evidence/poodle-registration-uk-800.png` |
+| `output/playwright/email-templates/resend-published.jpg` | `docs/archive/email-templates/evidence/resend-published.jpg` |
+| `poodle_flutter/README.md` | `docs/development/flutter.md` |
+| `poodle_server/CHANGELOG.md` | `docs/archive/packages/server-changelog.md` |
+| `poodle_server/README.md` | `docs/development/server.md` |
+| `poodle_worker/README.md` | `docs/development/worker.md` |
+| `reference/flutter-tdd.html` | `docs/archive/learning/reference/flutter-tdd.html` |
+| `reference/serverpod-migrations.html` | `docs/archive/learning/reference/serverpod-migrations.html` |
+| `screenshots/teacher-view/01-teacher-dashboard.jpg` | `docs/archive/tasks/evidence/teacher-view/01-teacher-dashboard.jpg` |
+| `screenshots/teacher-view/02-course-workspace.jpg` | `docs/archive/tasks/evidence/teacher-view/02-course-workspace.jpg` |
+| `screenshots/teacher-view/03-assignment-editor.jpg` | `docs/archive/tasks/evidence/teacher-view/03-assignment-editor.jpg` |
+| `screenshots/teacher-view/04-test-settings.jpg` | `docs/archive/tasks/evidence/teacher-view/04-test-settings.jpg` |
+| `screenshots/teacher-view/05-question-editor.jpg` | `docs/archive/tasks/evidence/teacher-view/05-question-editor.jpg` |
+| `screenshots/teacher-view/06-teacher-defaults.jpg` | `docs/archive/tasks/evidence/teacher-view/06-teacher-defaults.jpg` |
+| `tasks/backend-platform.md` | `docs/archive/tasks/backend-platform.md` |
+| `tasks/course-view-results.md` | `docs/archive/tasks/course-view-results.md` |
+| `tasks/google-auth-results.md` | `docs/archive/tasks/google-auth-results.md` |
+| `tasks/identity-access-plan.md` | `docs/archive/tasks/identity-access-plan.md` |
+| `tasks/identity-access-results.md` | `docs/archive/tasks/identity-access-results.md` |
+| `tasks/identity-access-tasks.md` | `docs/archive/tasks/identity-access-tasks.md` |
+| `tasks/implementation-results.md` | `docs/archive/tasks/implementation-results.md` |
+| `tasks/in-app-links-plan.md` | `docs/archive/tasks/in-app-links-plan.md` |
+| `tasks/in-app-links-results.md` | `docs/archive/tasks/in-app-links-results.md` |
+| `tasks/ios-tab-bar-results.md` | `docs/archive/tasks/ios-tab-bar-results.md` |
+| `tasks/notebook-e2e-evidence/android/audio-playing.png` | `docs/archive/tasks/notebook-e2e-evidence/android/audio-playing.png` |
+| `tasks/notebook-e2e-evidence/android/audio-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/android/audio-ready.png` |
+| `tasks/notebook-e2e-evidence/android/chat-existing-answer.png` | `docs/archive/tasks/notebook-e2e-evidence/android/chat-existing-answer.png` |
+| `tasks/notebook-e2e-evidence/android/docx-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/android/docx-ready.png` |
+| `tasks/notebook-e2e-evidence/android/flashcard-answer.png` | `docs/archive/tasks/notebook-e2e-evidence/android/flashcard-answer.png` |
+| `tasks/notebook-e2e-evidence/android/flashcards-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/android/flashcards-ready.png` |
+| `tasks/notebook-e2e-evidence/android/pdf-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/android/pdf-ready.png` |
+| `tasks/notebook-e2e-evidence/android/quiz-answer.png` | `docs/archive/tasks/notebook-e2e-evidence/android/quiz-answer.png` |
+| `tasks/notebook-e2e-evidence/android/quiz-loading.png` | `docs/archive/tasks/notebook-e2e-evidence/android/quiz-loading.png` |
+| `tasks/notebook-e2e-evidence/android/quiz-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/android/quiz-ready.png` |
+| `tasks/notebook-e2e-evidence/android/scanned-pdf-error.png` | `docs/archive/tasks/notebook-e2e-evidence/android/scanned-pdf-error.png` |
+| `tasks/notebook-e2e-evidence/android/scanned-pdf-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/android/scanned-pdf-ready.png` |
+| `tasks/notebook-e2e-evidence/android/sources-all-formats.png` | `docs/archive/tasks/notebook-e2e-evidence/android/sources-all-formats.png` |
+| `tasks/notebook-e2e-evidence/android/sources.png` | `docs/archive/tasks/notebook-e2e-evidence/android/sources.png` |
+| `tasks/notebook-e2e-evidence/android/studio.png` | `docs/archive/tasks/notebook-e2e-evidence/android/studio.png` |
+| `tasks/notebook-e2e-evidence/android/upload-scanned-pdf.png` | `docs/archive/tasks/notebook-e2e-evidence/android/upload-scanned-pdf.png` |
+| `tasks/notebook-e2e-evidence/ios/audio-playing.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/audio-playing.png` |
+| `tasks/notebook-e2e-evidence/ios/audio-queued.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/audio-queued.png` |
+| `tasks/notebook-e2e-evidence/ios/chat-existing-answer.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/chat-existing-answer.png` |
+| `tasks/notebook-e2e-evidence/ios/flashcard-answer.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/flashcard-answer.png` |
+| `tasks/notebook-e2e-evidence/ios/quiz-answer.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/quiz-answer.png` |
+| `tasks/notebook-e2e-evidence/ios/scanned-pdf-error.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/scanned-pdf-error.png` |
+| `tasks/notebook-e2e-evidence/ios/shared-account-sources-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/shared-account-sources-ready.png` |
+| `tasks/notebook-e2e-evidence/ios/sources-all-formats.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/sources-all-formats.png` |
+| `tasks/notebook-e2e-evidence/ios/sources.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/sources.png` |
+| `tasks/notebook-e2e-evidence/ios/studio-ready.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/studio-ready.png` |
+| `tasks/notebook-e2e-evidence/ios/studio.png` | `docs/archive/tasks/notebook-e2e-evidence/ios/studio.png` |
+| `tasks/notebook-e2e-results.md` | `docs/archive/tasks/notebook-e2e-results.md` |
+| `tasks/notebook-live-demo-results.json` | `docs/archive/tasks/notebook-live-demo-results.json` |
+| `tasks/notebook-results.md` | `docs/archive/tasks/notebook-results.md` |
+| `tasks/notebook-test-fixtures/linear-systems-methods.txt` | `poodle_worker/test/fixtures/manual/linear-systems-methods.txt` |
+| `tasks/notebook-test-fixtures/matrix-foundations.md` | `poodle_worker/test/fixtures/manual/matrix-foundations.md` |
+| `tasks/notebook-ui-evidence/citation-passage.jpg` | `docs/archive/tasks/notebook-ui-evidence/citation-passage.jpg` |
+| `tasks/notebook-ui-evidence/citation-viewer-results.json` | `docs/archive/tasks/notebook-ui-evidence/citation-viewer-results.json` |
+| `tasks/notebook-ui-evidence/live-bilingual-answers.jpg` | `docs/archive/tasks/notebook-ui-evidence/live-bilingual-answers.jpg` |
+| `tasks/notebook-ui-evidence/live-english-answer.jpg` | `docs/archive/tasks/notebook-ui-evidence/live-english-answer.jpg` |
+| `tasks/notebook-ui-evidence/persisted-bilingual-answers.jpg` | `docs/archive/tasks/notebook-ui-evidence/persisted-bilingual-answers.jpg` |
+| `tasks/notebook-ui-evidence/results.json` | `docs/archive/tasks/notebook-ui-evidence/results.json` |
+| `tasks/notebook-ui-evidence/teacher-settings-results.json` | `docs/archive/tasks/notebook-ui-evidence/teacher-settings-results.json` |
+| `tasks/notebook-ui-evidence/teacher-settings-saved.jpg` | `docs/archive/tasks/notebook-ui-evidence/teacher-settings-saved.jpg` |
+| `tasks/notebook-ui-evidence/ui-test-notes.md` | `docs/archive/tasks/notebook-ui-evidence/ui-test-notes.md` |
+| `tasks/plan.md` | `docs/archive/tasks/plan.md` |
+| `tasks/semantic-search-rollout.md` | `docs/guides/semantic-search-rollout.md` |
+| `tasks/teacher-workspace-results.json` | `docs/archive/tasks/teacher-workspace-results.json` |
+| `tasks/todo.md` | `docs/archive/tasks/todo.md` |
+| `tasks/university-access-results.md` | `docs/archive/tasks/university-access-results.md` |
+| `poodle_flutter/lib/features/account/account_view_model.dart` | `poodle_flutter/lib/features/account/presentation/view_models/account_view_model.dart` |
+| `poodle_flutter/lib/features/account/profile_screen.dart` | `poodle_flutter/lib/features/account/presentation/views/profile_screen.dart` |
+| `poodle_flutter/lib/features/calendar/calendar_screen.dart` | `poodle_flutter/lib/features/calendar/presentation/views/calendar_screen.dart` |
+| `poodle_flutter/lib/features/grades/student_grades_screen.dart` | `poodle_flutter/lib/features/grades/presentation/views/student_grades_screen.dart` |
+| `poodle_flutter/lib/features/help/help_screen.dart` | `poodle_flutter/lib/features/help/presentation/views/help_screen.dart` |
+| `poodle_flutter/lib/features/messaging/incoming_message_banner.dart` | `poodle_flutter/lib/features/messaging/presentation/widgets/incoming_message_banner.dart` |
+| `poodle_flutter/lib/features/messaging/messaging_screen.dart` | `poodle_flutter/lib/features/messaging/presentation/views/messaging_screen.dart` |
+| `poodle_flutter/lib/features/messaging/messaging_view_model.dart` | `poodle_flutter/lib/features/messaging/presentation/view_models/messaging_view_model.dart` |
+| `poodle_flutter/lib/features/my_files/my_files_screen.dart` | `poodle_flutter/lib/features/my_files/presentation/views/my_files_screen.dart` |
+| `poodle_flutter/lib/features/notifications/notifications_screen.dart` | `poodle_flutter/lib/features/notifications/presentation/views/notifications_screen.dart` |
+| `poodle_flutter/lib/features/notifications/notifications_view_model.dart` | `poodle_flutter/lib/features/notifications/presentation/view_models/notifications_view_model.dart` |
+| `poodle_flutter/lib/features/search/search_screen.dart` | `poodle_flutter/lib/features/search/presentation/views/search_screen.dart` |
+| `poodle_flutter/lib/features/search/search_view_model.dart` | `poodle_flutter/lib/features/search/presentation/view_models/search_view_model.dart` |
+| `poodle_flutter/lib/features/settings/settings_screen.dart` | `poodle_flutter/lib/features/settings/presentation/views/settings_screen.dart` |
+| `poodle_flutter/lib/features/settings/settings_view_model.dart` | `poodle_flutter/lib/features/settings/presentation/view_models/settings_view_model.dart` |
+| `poodle_flutter/lib/features/settings/space_usage_screen.dart` | `poodle_flutter/lib/features/settings/presentation/views/space_usage_screen.dart` |
+| `poodle_flutter/lib/features/settings/synchronisation_screen.dart` | `poodle_flutter/lib/features/settings/presentation/views/synchronisation_screen.dart` |
+| `poodle_flutter/lib/features/tasks/student_tasks_screen.dart` | `poodle_flutter/lib/features/tasks/presentation/views/student_tasks_screen.dart` |
+| `poodle_flutter/lib/features/tasks/student_tasks_view_model.dart` | `poodle_flutter/lib/features/tasks/presentation/view_models/student_tasks_view_model.dart` |
+
+## Removed files
+
+| Path | Reason |
+| --- | --- |
+| `poodle_server/lib/src/greetings/greeting_endpoint.dart` | Unused Serverpod starter API |
+| `poodle_server/lib/src/greetings/greeting.spy.yaml` | Non-table model used only by the starter API |
+| `poodle_server/test/integration/greeting_endpoint_test.dart` | Covered only the removed starter API |
+| `poodle_flutter/test/widget/widget_test.dart` | Empty starter test |
+| `email_templates/poodle-resend-approved.zip` | All 15 file members matched the expanded approval snapshot |
+
+Serverpod owns the generated consequences of removing the greeting API. This workspace has no Git index, so this document is a move and removal inventory, not a verified staging manifest.

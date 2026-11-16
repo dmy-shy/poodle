@@ -1,0 +1,20 @@
+class: CourseActivityRecord
+serverOnly: true
+table: poodle_course_activity
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  section: CourseSectionRecord?, relation(onDelete=Cascade)
+  title: String
+  description: String?
+  kind: String
+  sortOrder: int
+  published: bool, default=false
+  file: CourseFileInfo?
+  storageId: String?
+  storagePath: String?
+  link: CourseLinkInfo?
+  announcement: CourseAnnouncementInfo?
+  assessment: CourseAssessmentInfo?
+indexes:
+  poodle_activity_order:
+    fields: sectionId, sortOrder

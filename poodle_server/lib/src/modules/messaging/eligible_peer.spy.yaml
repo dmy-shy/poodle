@@ -1,0 +1,5 @@
+### A course-eligible account that can receive a private message from the authenticated user.
+class: EligiblePeer
+fields:
+  userId: UuidValue
+  email: String

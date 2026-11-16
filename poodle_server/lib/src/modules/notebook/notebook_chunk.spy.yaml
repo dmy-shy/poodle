@@ -1,0 +1,18 @@
+class: NotebookChunkRecord
+serverOnly: true
+table: poodle_notebook_chunk
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  sourceId: UuidValue
+  sourceVersionId: UuidValue
+  blockId: String
+  pageNumber: int?
+  locationLabel: String?
+  content: String
+  embedding: Vector(1536)
+  createdAt: DateTime, default=now
+indexes:
+  poodle_notebook_chunk_version:
+    fields: sourceVersionId
+  poodle_notebook_chunk_source:
+    fields: sourceId

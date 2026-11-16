@@ -1,0 +1,11 @@
+class: MyUpload
+fields:
+  id: UuidValue
+  fileName: String
+  kind: String
+  uploadedAt: DateTime
+  courseId: UuidValue
+  courseTitle: String
+  activityId: UuidValue
+  activityTitle: String
+  processingStatus: String?

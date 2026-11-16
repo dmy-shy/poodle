@@ -1,0 +1,11 @@
+### Current server-confirmed authority. Contains no credentials or global course roles.
+class: AccountSnapshot
+fields:
+  authUserId: UuidValue
+  email: String
+  isAdmin: bool
+  universityId: UuidValue?
+  isUniversityAdmin: bool, default=false
+  teacherApproved: bool
+  googleLinked: bool, default=false
+  hasPassword: bool, default=false

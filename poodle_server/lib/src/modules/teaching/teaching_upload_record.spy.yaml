@@ -1,0 +1,11 @@
+class: TeachingUploadRecord
+serverOnly: true
+table: poodle_teaching_upload
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  activityId: UuidValue
+  ownerId: UuidValue
+  fileName: String
+  sizeBytes: int
+  path: String
+  createdAt: DateTime

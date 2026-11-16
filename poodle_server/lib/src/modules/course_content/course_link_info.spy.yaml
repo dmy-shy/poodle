@@ -1,0 +1,3 @@
+class: CourseLinkInfo
+fields:
+  url: String

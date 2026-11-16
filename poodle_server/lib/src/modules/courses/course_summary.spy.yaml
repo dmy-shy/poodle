@@ -1,0 +1,12 @@
+class: CourseSummary
+fields:
+  id: UuidValue
+  title: String
+  category: String?
+  summary: String?
+  teacherName: String?
+  sample: bool
+  starred: bool
+  hidden: bool
+  role: String?
+  published: bool, default=true

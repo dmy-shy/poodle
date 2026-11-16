@@ -1,0 +1,6 @@
+class: UniversityMemberSummary
+fields:
+  userId: UuidValue
+  email: String
+  administrator: bool
+  teacherApproved: bool

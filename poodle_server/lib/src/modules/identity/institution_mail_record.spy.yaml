@@ -1,0 +1,18 @@
+class: InstitutionMailRecord
+serverOnly: true
+table: poodle_institution_mail
+fields:
+  id: UuidValue?, defaultModel=random_v7
+  key: String
+  email: String
+  subject: String
+  body: String
+  attempts: int, default=0
+  availableAt: DateTime, defaultModel=now
+  deliveredAt: DateTime?
+indexes:
+  poodle_institution_mail_key:
+    fields: key
+    unique: true
+  poodle_institution_mail_pending:
+    fields: deliveredAt, availableAt

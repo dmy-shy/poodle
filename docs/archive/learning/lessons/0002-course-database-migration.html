@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make Poodle’s course tables real</title>
+  <link rel="stylesheet" href="../assets/learning.css">
+  <script src="../assets/quiz.js" defer></script>
+</head>
+<body><main>
+  <nav aria-label="Learning navigation"><a href="0001-splash-screen-tdd.html">Previous lesson</a><a href="../reference/serverpod-migrations.html">Migration reference</a><a href="#practice">Practice</a></nav>
+  <p class="eyebrow">Lesson 02 · Poodle backend · Five minutes</p>
+  <h1>Make the course tables real</h1>
+  <p class="lede">Your win: explain the startup warning, then bring the development database up to the course feature’s schema.</p>
+  <h2>Why both messages are true</h2>
+  <p>Poodle’s generated schema contains four course tables. The saved migration history does not contain them yet. “Latest database migration already applied” means the database has applied the latest <em>saved</em> revision.</p>
+  <div class="loop">
+    <div><strong>1 · Model</strong><span>A .spy.yaml file describes a table.</span></div>
+    <div><strong>2 · Migration</strong><span>SQL records the required database changes.</span></div>
+    <div><strong>3 · Database</strong><span>Applying that SQL creates the real tables.</span></div>
+  </div>
+  <p>Code generation prepares Dart classes and the target schema. A migration changes PostgreSQL. See <a href="https://docs.serverpod.dev/concepts/data-and-the-database/database/migrations">Serverpod’s migration guide</a>.</p>
+  <section id="practice">
+    <h2>Try it in your running terminal</h2>
+    <ol>
+      <li>Focus the terminal running <code>serverpod start</code>.</li>
+      <li>Press lowercase <kbd>m</kbd>, without Shift. This creates and applies a migration.</li>
+      <li>Wait for successful application. Look for a new directory under <code>poodle_server/migrations/</code>; its SQL should create the four tables below.</li>
+      <li>In the default watch session, press lowercase <kbd>r</kbd> to restart. This reruns Poodle’s startup seed.</li>
+      <li>Read the new startup output. The missing-table warning should disappear.</li>
+    </ol>
+    <pre><code>poodle_course
+poodle_course_activity
+poodle_course_membership
+poodle_course_section</code></pre>
+    <p>The keyboard actions are documented in <a href="https://docs.serverpod.dev/concepts/server-fundamentals/running-your-server">Running your server</a>. Press <kbd>h</kbd> for the session’s shortcuts if they differ.</p>
+    <div class="callout">If creation or application fails, keep the first error and send it to me. If it reports no model changes, send that output too. A repair migration reconciles the live database with a saved schema; first we need the missing course revision.</div>
+  </section>
+  <h2>Recall before revealing</h2>
+  <p>Generated models include courses, but saved migrations contain no course tables. Which operation comes next?</p>
+  <div data-quiz>
+    <button type="button" data-feedback="Generation prepares Dart and the target schema. The missing piece is a saved migration.">Generate Dart code</button>
+    <button type="button" data-feedback="Yes. Create the missing course migration, then apply it. The m shortcut does both.">Create database migration</button>
+    <button type="button" data-feedback="Repair compares the live database with a saved migration schema. The course revision is not saved yet.">Repair existing migration</button>
+    <p class="feedback" role="status" aria-live="polite"></p>
+  </div>
+  <details><summary>Explain the answer in your own words first</summary><p>Create the migration: generated Dart exists, but the SQL revision needed to create the tables is missing.</p></details>
+  <footer><p>Primary reading: <a href="https://docs.serverpod.dev/concepts/data-and-the-database/database/migrations">Serverpod migrations</a>, especially “Creating a migration.” Keep the <a href="../reference/serverpod-migrations.html">quick reference</a> nearby.</p><p>Send the output after pressing m, or ask about any unfamiliar term. Next session, try explaining why generation alone cannot create a database table.</p></footer>
+</main></body>
+</html>

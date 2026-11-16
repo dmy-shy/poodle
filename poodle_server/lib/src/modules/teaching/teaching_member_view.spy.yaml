@@ -1,0 +1,5 @@
+class: TeachingMemberView
+fields:
+  id: UuidValue
+  label: String
+  role: String

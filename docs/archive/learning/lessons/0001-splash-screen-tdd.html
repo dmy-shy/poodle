@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Poodle · Your first screen with TDD</title><link rel="stylesheet" href="../assets/learning.css"><script src="../assets/quiz.js" defer></script></head>
+<body><main>
+<nav><a href="#red">Write the test</a><a href="#green">Make it pass</a><a href="#recall">Check yourself</a><a href="../reference/flutter-tdd.html">Quick reference</a></nav>
+<p class="eyebrow">Lesson 01 / Flutter / About 10 minutes</p>
+<h1>Your first screen,<br>one promise at a time.</h1>
+<p class="lede">Your win: write a failing widget test, then make the splash screen display <strong>Poodle</strong>.</p>
+<p>You want to build each screen yourself with tests first. This lesson uses your existing files; you make the edits. The examples below have not been executed in your project.</p>
+<div class="callout"><strong>Our agreed behavior</strong><br>When SplashScreen is rendered, the user sees “Poodle.” Our test boundary is the rendered widget, with no backend request.</div>
+<p>Right now, <code>poodle_flutter/lib/screens/splash_screen.dart</code> contains the greeting form. <code>poodle_flutter/test/widget/splash_screen_test.dart</code> is empty. Your <code>pubspec.yaml</code> already includes <code>flutter_test</code>.</p>
+<div class="loop"><div><strong>01 · Red</strong><span>Prove the name is missing.</span></div><div><strong>02 · Green</strong><span>Display the name.</span></div><div><strong>03 · Review</strong><span>Keep the solution clear.</span></div></div>
+<p>This follows test first → implementation → review for refactoring. Work through one behavior before adding the next. <a href="https://martinfowler.com/bliki/TestDrivenDevelopment.html">TDD process reference</a>.</p>
+
+<section id="red"><h2>1. Write the test before the screen</h2>
+<p>Put this in <code>poodle_flutter/test/widget/splash_screen_test.dart</code>. Leave the screen unchanged for now.</p>
+<pre><code>import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:poodle_flutter/screens/splash_screen.dart';
+
+void main() {
+  testWidgets('splash screen shows the Poodle name', (tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(body: SplashScreen()),
+      ),
+    );
+
+    expect(find.text('Poodle'), findsOneWidget);
+  });
+}</code></pre>
+<p><code>pumpWidget</code> builds the screen; <code>find.text</code> looks for the label; <code>findsOneWidget</code> requires exactly one match. The app and scaffold supply the usual UI context. <a href="https://docs.flutter.dev/cookbook/testing/widget/introduction">Flutter widget-testing guide</a>.</p>
+<p><strong>Predict before running:</strong> Will the test pass? Which visible text does the current screen actually show?</p>
+<p>From the project root, enter the Flutter package and run just this file:</p>
+<pre><code>cd poodle_flutter
+rtk proxy flutter test test/widget/splash_screen_test.dart</code></pre>
+<p><strong>Expected red:</strong> the assertion expects one match for “Poodle” and finds none. Read your actual output; the wording can vary. An import or SDK error is a setup problem to fix before proceeding.</p>
+<details><summary>Why test SplashScreen instead of MyApp?</summary><p><code>MyApp</code> already renders “Poodle” in <code>MyHomePage</code>'s app bar. An unrestricted text search there could pass even though the splash body still shows the greeting form. Rendering the screen on its own makes this test sensitive to the behavior we agreed to build.</p></details>
+</section>
+
+<section id="green"><h2>2. Add only enough to pass</h2>
+<p>After observing the missing-label failure, change <code>poodle_flutter/lib/screens/splash_screen.dart</code> so its public <code>SplashScreen</code> widget displays “Poodle.” Try it yourself first. You already have the greeting example preserved in <code>lib/screens/greetings_screen.dart</code>.</p>
+<details><summary>Small hint</summary><p>This slice has no changing data. A <code>StatelessWidget</code> that returns <code>Center</code> containing <code>Text</code> is enough. The existing parent already supplies the scaffold.</p></details>
+<details><summary>Reveal a minimal implementation after your attempt</summary>
+<p>Replace the splash file with:</p>
+<pre><code>import 'package:flutter/material.dart';
+
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(child: Text('Poodle'));
+  }
+}</code></pre>
+<p>The current app calls <code>const SplashScreen()</code>, so this constructor fits the existing usage. It is one completed display behavior; startup routing will be another lesson.</p>
+</details>
+<p>From <code>poodle_flutter</code>, follow the project's analyze → format → test order:</p>
+<pre><code>rtk proxy dart analyze
+rtk proxy dart format lib/screens/splash_screen.dart test/widget/splash_screen_test.dart
+rtk proxy flutter test test/widget/splash_screen_test.dart</code></pre>
+<p><strong>Expected green:</strong> one passing test. Read any analyzer findings and test failures rather than assuming the example guarantees success. If a failure surprises you, send the output to the agent.</p>
+<p>The test is local and does not need a running server. To review the live app, use your existing <code>serverpod start</code> workflow; the agent uses Serverpod MCP for restart and logs. Changing this screen from stateful to stateless warrants a hot restart under your project instructions. Do not alter generated client code.</p>
+</section>
+
+<section id="recall"><h2>3. Recall before moving on</h2>
+<div data-quiz><p>You have written the first test. What should happen next?</p>
+<button type="button" data-feedback="Try again. Changing the screen now skips the evidence that your new test detects the missing behavior.">Change the screen code</button>
+<button type="button" data-feedback="Correct. Run it and confirm the missing-label assertion fails. Then make the smallest passing change.">Run the failing test</button>
+<button type="button" data-feedback="Try again. Navigation is a later behavior. Finish this small red → green cycle first.">Add the navigation flow</button>
+<p class="feedback" role="status" aria-live="polite"></p><noscript><p>Answer: run the failing test, then inspect why it failed.</p></noscript></div>
+<p><strong>Without looking above:</strong> explain what <code>pumpWidget</code>, <code>find.text</code>, and <code>findsOneWidget</code> each contribute. Tomorrow, rebuild this test from memory and run it again.</p>
+<p><strong>Review after green:</strong> is any code left over from the greeting form? Remove unrelated code if needed, then rerun the test. You do not have to invent a refactor for this tiny widget.</p>
+</section>
+
+<section><h2>What this first win proves</h2>
+<p>It proves that the rendered splash widget contains the name. In your current app, <code>MyHomePage</code> uses that widget as its body. It does not yet establish a complete startup flow.</p>
+<p>Your <code>main()</code> awaits <code>initializeClient()</code> before <code>runApp()</code>, so this Flutter widget cannot cover that earlier wait. The native launch screen handles the period before Flutter displays its first frame. <a href="https://docs.flutter.dev/platform-integration/android/splash-screen">Flutter's Android launch-screen documentation</a>.</p>
+<p>After you finish, we can agree on the next behavior: showing loading, then leaving the splash when startup finishes. Authentication and error handling stay with the existing Serverpod setup.</p>
+</section>
+<footer><p><strong>Primary reading:</strong> <a href="https://docs.flutter.dev/cookbook/testing/widget/introduction">Flutter's introduction to widget testing</a>, sections 3–6.</p><p>Keep the <a href="../reference/flutter-tdd.html">TDD reference and glossary</a> nearby. Ask the agent follow-up questions at any point. Send your first failing output and your prediction for feedback before continuing to green.</p></footer>
+</main></body></html>

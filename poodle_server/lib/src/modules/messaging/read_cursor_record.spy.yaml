@@ -1,0 +1,13 @@
+class: ReadCursorRecord
+serverOnly: true
+table: poodle_message_read_cursor
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  conversationId: UuidValue
+  participantId: UuidValue
+  readThroughId: int, default=0
+  updatedAt: DateTime, defaultModel=now
+indexes:
+  poodle_message_read_cursor_unique:
+    fields: conversationId, participantId
+    unique: true

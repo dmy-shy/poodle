@@ -1,0 +1,12 @@
+class: CourseRecord
+serverOnly: true
+table: poodle_course
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  title: String
+  university: UniversityRecord?, relation(optional, onDelete=Restrict)
+  category: String?
+  summary: String?
+  teacherName: String?
+  seedOwned: bool, default=false
+  published: bool, default=true

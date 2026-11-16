@@ -1,0 +1,40 @@
+# Poodle implementation status
+
+Source review: 2026-11-15. This is a code inventory, not a claim that every flow has passed device or production acceptance. [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) describes the intended LMS; the historical files under `tasks/` record what was verified at their stated dates.
+
+## Delivery stages
+
+| Architecture stage | Current state | Main gaps |
+| --- | --- | --- |
+| 1. Foundation, identity, routing and shared UI | Serverpod/PostgreSQL, built-in email and JWT authentication, Google ID-token endpoints, first-run onboarding, English/Ukrainian localization, light Material theme, guarded routes and platform navigation are implemented. University request, operator review, administrator and invitation flows are wired to the live app. | Production mail and Google account acceptance, legacy university ownership backfill, and full role/device acceptance remain open. |
+| 2. Courses, materials and cited study answers | Membership-scoped course/content APIs, mobile course views, private file access, PDF display, DOCX handoff, and a separate ingestion/chat worker are implemented. Notebook answers use authorized source versions and citations. | Website/YouTube import and other media types are absent. Deployment and broader answer-quality/load checks remain open. |
+| 3. Assessments, grades, messaging and progress | Teacher editing, assignment submission versions, grading/reopening, tests, student tasks/grades and persistent one-to-one messaging have Serverpod endpoints and live screens. | Server-calculated completion/progress is absent. Messaging has fetch/send/read APIs and UI polling, but no Serverpod stream or offline conversation cache. |
+| 4. Home, discovery, calendar, settings and notifications | Live role-aware Home, course preferences, lexical/optional semantic search, assessment-derived calendar, basic settings, explicit mobile downloads, and persistent notification inbox are wired. | The dedicated calendar-event/announcement system, reminder scheduling, notification preferences/outbox and remote push delivery are absent. Several settings and secondary destinations are previews. |
+| 5. Private sources, Studio and release checks | Private notebook uploads, TXT/Markdown/PDF/DOCX extraction including bounded PDF OCR, private notes, quiz/flash-card/audio Studio jobs, and account-scoped mobile caches exist. | Scanned-PDF extraction was intermittent in live device checks; direct iOS upload, offline recovery, cross-account device checks, whole-app accessibility, pilot load and production deployment remain open. |
+
+## Running architecture
+
+- `poodle_flutter/lib/main.dart` builds live Serverpod-backed repositories; `lib/main_preview.dart` keeps simulated authentication and preview content. `lib/app/poodle_app.dart` owns routing and dependency injection. Features hold Views/ViewModels, and `lib/data/` holds repositories, caches and platform services. The app currently forces the light theme.
+- `poodle_server/lib/server.dart` initializes email/JWT and optional Google identity, private/public Serverpod cloud storage with database fallback, development seeds, operator bootstrap and the institution-mail future call. Handwritten endpoints/services/models live under `lib/src/modules/`; generated server and client files are not edited.
+- Registration, password reset and email change now use the six published English/Ukrainian Resend templates through Serverpod. Request-specific codes and UTC deadlines remain server-owned; email-change resends keep their original deadline. [Integration evidence](../guides/email-server-integration.md) records 60 server and 37 Flutter passing checks on 2026-11-15; controlled real-inbox acceptance remains open.
+- `poodle_worker/bin/main.dart` is a separate process for notebook ingestion, chat, Studio and search indexing. `serverpod start` does not launch it. Search can run alone with `--search-only`. OpenAI credentials and model/pricing configuration belong on the server/worker, never in Flutter.
+- Serverpod manages the local development database and the isolated PostgreSQL databases used by `poodle_server` tests. Mobile course/notebook/calendar/notification caches use account-scoped SQLite; web calendar uses preferences. Storage uses Serverpod cloud storage with a database fallback. Cloudflare R2 and Railway are architectural deployment targets, not configured runtime providers in this source tree.
+
+## Feature inventory
+
+| Area | Implemented in source | Boundary or unfinished work |
+| --- | --- | --- |
+| Identity and institutions | Email verification, password reset, JWT sessions, optional Google login/link, email change, role-aware university requests and invitations. | Real provider configuration, delivered-link and multi-role device acceptance; legacy ownership backfill. |
+| Courses and teaching | Membership/tenancy checks, course creation/publication, ordered content, private files, starred/hidden preferences, teacher activity editing, assignments, versioned submissions, grading, tests, student tasks and grades. | Formal completion percentage and broader course browsing filters/sort/layout preferences. |
+| Notebook | Private assessment notebooks, source selection/upload/removal, cited bilingual chat, saved notes, quiz/flash cards/audio, durable worker jobs and budget accounting. | Website/YouTube and other media import; scanned-PDF reliability and remaining mobile acceptance. |
+| Search | Membership-filtered course/section/activity search, recent history, keyword fallback, optional embedding ranking and independent index worker. | Pilot relevance calibration, indexing operations, accessibility and load validation. |
+| Messaging | Pair conversations, eligible-peer lookup, persistent messages, idempotent sends, history and read cursors; live Flutter inbox and conversation screens. | Server streams, push, offline history and reconnect catch-up. The current Flutter banner polls. |
+| Calendar and announcements | Calendar derives opening/closing dates from published assessments and caches them. Course content can expose announcement rows, including development seed content. | Teacher-created calendar events, dedicated announcements feed, reminder scheduling and a live Home announcements route. |
+| Notifications and push | Transactional inbox records for assignment/grade events, authenticated list/read APIs, live inbox and offline cache. A push-device registration endpoint and native Firebase configuration exist. | Flutter currently logs an Android Firebase installation ID; it does not bind a token to an account through that endpoint. iOS registration, delivery worker/provider, outbox, preferences and device tap acceptance are absent. |
+| Offline and settings | Cached course/notebook/calendar/inbox reads, explicit mobile file downloads, refresh/status and storage removal; language, text size and Wi-Fi-only download preferences. | No offline writes or message cache. Dark theme, many settings, website/media downloads and web file downloads are not implemented. |
+
+## Verification and release boundary
+
+Automated unit, widget and integration tests exist in all three handwritten packages. The worker has an opt-in live provider test; routine tests use fakes. [Notebook device evidence](../archive/tasks/notebook-e2e-results.md) records iOS and Android simulator checks from 2026-11-14, including an intermittent scanned-PDF failure. [University access results](../archive/tasks/university-access-results.md), [Google auth results](../archive/tasks/google-auth-results.md) and [semantic search rollout](../guides/semantic-search-rollout.md) record narrower checks and open gates. These dated results should not be read as a fresh full-suite pass.
+
+The release gates in [TESTING.md](../development/TESTING.md) are still targets. In particular, a 30-user load run, comprehensive VoiceOver/TalkBack review, production mail/push integration, cross-account/offline recovery on devices and deployment validation are not established by this source review.

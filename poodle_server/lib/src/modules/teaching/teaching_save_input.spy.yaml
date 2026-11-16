@@ -1,0 +1,10 @@
+class: TeachingSaveInput
+fields:
+  courseId: UuidValue
+  sectionId: UuidValue
+  activityId: UuidValue
+  kind: String
+  expectedRevision: int
+  publish: bool
+  settings: TeachingSettings
+  questions: List<TeachingQuestion>

@@ -1,0 +1,51 @@
+POODLE — APPROVED RESEND UPLOAD PACKAGE
+
+Design approved: main Poodle logo, no header.
+
+1. Host assets/poodle-logo.png at a public HTTPS URL (Resend image hosting or your static host).
+2. Create one template per entry below. Import templates/*.html, NOT preview/*.html.
+3. Set the alias, subject and preview text listed below. Use your verified Poodle sender.
+4. Declare CODE, EXPIRES_AT_UTC, LOGO_URL as string variables. Do not set a fallback verification code.
+5. Preview with sample code 01234567, a fictitious UTC deadline, and the hosted HTTPS logo URL.
+6. Confirm the logo loads and text matches the approved screenshots, then publish each template.
+7. Send back the six aliases (or IDs) and the hosted logo URL for backend integration.
+
+The plain-text .txt files are reference alternatives for checking Resend plain-text rendering.
+Never put the Resend API key in Flutter or send it in chat.
+
+VARIABLE CONTRACT
+CODE: server-generated code as a string; preserve leading zeros.
+EXPIRES_AT_UTC: actual deadline, formatted YYYY-MM-DD HH:mm; UTC label is already in HTML.
+LOGO_URL: public HTTPS URL of the included main logo. No local/relative file paths.
+
+TEMPLATES
+
+poodle-registration-en
+HTML: templates/poodle-registration-en.html
+Subject: Verify your email — Poodle
+Preview: You requested a code to join Poodle by invitation. Use it to verify your email before creating your account.
+
+poodle-password-reset-en
+HTML: templates/poodle-password-reset-en.html
+Subject: Reset your password — Poodle
+Preview: You requested a password reset for your Poodle account. Use this code to verify the request, then choose a new password.
+
+poodle-email-change-en
+HTML: templates/poodle-email-change-en.html
+Subject: Confirm your new email — Poodle
+Preview: You requested to change the email address for your Poodle account. This code confirms that you can access the new address.
+
+poodle-registration-uk
+HTML: templates/poodle-registration-uk.html
+Subject: Підтвердьте електронну пошту — Poodle
+Preview: Ви запросили код, щоб приєднатися до Poodle за запрошенням. Підтвердьте електронну пошту, перш ніж створити обліковий запис.
+
+poodle-password-reset-uk
+HTML: templates/poodle-password-reset-uk.html
+Subject: Скиньте пароль — Poodle
+Preview: Ви запросили скидання пароля облікового запису Poodle. Підтвердьте запит цим кодом, а потім створіть новий пароль.
+
+poodle-email-change-uk
+HTML: templates/poodle-email-change-uk.html
+Subject: Підтвердьте нову адресу — Poodle
+Preview: Ви запросили зміну електронної пошти облікового запису Poodle. Цей код підтверджує, що ви маєте доступ до нової адреси.

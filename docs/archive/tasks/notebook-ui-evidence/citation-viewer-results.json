@@ -1,0 +1,268 @@
+{
+  "date": "2026-10-30",
+  "feature": "Authorized citation passage viewer",
+  "backend": "notebook.getCitationPassage resolves only citations on an accessible recent answer and checks current selected source/version authority with private query logging disabled",
+  "frontend": "English/Ukrainian plain-text bottom sheet with loading/error/close states; account/selection changes and dismissal clear evidence and fence late reads",
+  "validation": {
+    "server_tests": 62,
+    "focused_flutter_tests": 19,
+    "static_analysis": "No issues in changed backend/frontend paths",
+    "real_ui": "Flutter Driver signed in as seeded student, navigated to Test data notebook and opened a real persisted citation; exact bilingual block displayed",
+    "runtime_errors": "None reported by Dart MCP for the test app"
+  },
+  "schema_migration_required": false,
+  "screenshot": "citation-passage.jpg",
+  "remaining": [
+    "ClamAV signature setup still blocks private ingestion",
+    "Android/iOS citation navigation acceptance not performed; live screenshot is Chrome"
+  ],
+  "logs": {
+    "tail_server_logs": [
+      {
+        "type": "log",
+        "time": "2026-10-30T17:56:30.720911",
+        "level": "info",
+        "message": "✓ Server reloaded.",
+        "scope": {
+          "id": "root",
+          "label": "unknown"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "log",
+        "time": "2026-10-30T17:56:30.725143",
+        "level": "info",
+        "message": "✓ Browser refresh triggered.",
+        "scope": {
+          "id": "root",
+          "label": "unknown"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "operation",
+        "label": "WEB /",
+        "success": true,
+        "durationMs": 2,
+        "completedAt": "2026-10-30T17:56:30.974837"
+      },
+      {
+        "type": "log",
+        "time": "2026-10-30T17:56:37.568387",
+        "level": "info",
+        "message": "Files changed",
+        "scope": {
+          "id": "root",
+          "label": "unknown"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "operation",
+        "label": "Compiling server",
+        "success": true,
+        "durationMs": 17,
+        "completedAt": "2026-10-30T17:56:37.594483"
+      },
+      {
+        "type": "log",
+        "time": "2026-10-30T17:56:37.660227",
+        "level": "info",
+        "message": "✓ Server reloaded.",
+        "scope": {
+          "id": "root",
+          "label": "unknown"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "log",
+        "time": "2026-10-30T17:56:37.663645",
+        "level": "info",
+        "message": "✓ Browser refresh triggered.",
+        "scope": {
+          "id": "root",
+          "label": "unknown"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "log",
+        "time": "2026-10-30T17:56:37.742593",
+        "level": "info",
+        "message": "  Poodle app: Waiting for connection from debug service on Web Server...",
+        "scope": {
+          "id": "root",
+          "label": "unknown"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "operation",
+        "label": "WEB /",
+        "success": true,
+        "durationMs": 2,
+        "completedAt": "2026-10-30T17:56:37.976078"
+      },
+      {
+        "type": "operation",
+        "label": "Launching Poodle app (first run may take 30-60s)",
+        "success": true,
+        "durationMs": 46502,
+        "completedAt": "2026-10-30T17:57:12.379513"
+      },
+      {
+        "type": "log",
+        "time": "2026-10-30T17:57:12.379583",
+        "level": "info",
+        "message": "Poodle app running at http://localhost:57139",
+        "scope": {
+          "id": "root",
+          "label": "unknown"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "log",
+        "time": "2026-10-30T17:57:12.379601",
+        "level": "info",
+        "message": "  Poodle app: connecting",
+        "scope": {
+          "id": "1046340188_19403475074333_99",
+          "label": "Connecting to Poodle app VM service"
+        },
+        "metadata": {
+          "serverpod:logType": "Instance of 'TextLogType'"
+        }
+      },
+      {
+        "type": "operation",
+        "label": "Connecting to Poodle app VM service",
+        "success": true,
+        "durationMs": 5093,
+        "completedAt": "2026-10-30T17:57:17.473064"
+      },
+      {
+        "type": "operation",
+        "label": "emailIdp.login",
+        "success": true,
+        "durationMs": 143,
+        "completedAt": "2026-10-30T17:58:15.456824"
+      },
+      {
+        "type": "operation",
+        "label": "account.me",
+        "success": true,
+        "durationMs": 11,
+        "completedAt": "2026-10-30T17:58:15.492916"
+      },
+      {
+        "type": "operation",
+        "label": "course.listMyCourses",
+        "success": true,
+        "durationMs": 9,
+        "completedAt": "2026-10-30T17:58:15.512554"
+      },
+      {
+        "type": "operation",
+        "label": "teaching.dashboard",
+        "success": true,
+        "durationMs": 37,
+        "completedAt": "2026-10-30T17:58:15.667180"
+      },
+      {
+        "type": "operation",
+        "label": "courseContent.getCourseContent",
+        "success": true,
+        "durationMs": 216,
+        "completedAt": "2026-10-30T17:58:15.890697"
+      },
+      {
+        "type": "operation",
+        "label": "teaching.dashboard",
+        "success": true,
+        "durationMs": 20,
+        "completedAt": "2026-10-30T17:58:15.950715"
+      },
+      {
+        "type": "operation",
+        "label": "course.listMyCourses",
+        "success": true,
+        "durationMs": 24,
+        "completedAt": "2026-10-30T17:58:15.959050"
+      },
+      {
+        "type": "operation",
+        "label": "courseContent.getCourseContent",
+        "success": true,
+        "durationMs": 33,
+        "completedAt": "2026-10-30T17:58:20.055523"
+      },
+      {
+        "type": "operation",
+        "label": "courseContent.getActivity",
+        "success": true,
+        "durationMs": 34,
+        "completedAt": "2026-10-30T17:58:20.519156"
+      },
+      {
+        "type": "operation",
+        "label": "notebook.openNotebook",
+        "success": true,
+        "durationMs": 230,
+        "completedAt": "2026-10-30T17:58:20.952113"
+      },
+      {
+        "type": "operation",
+        "label": "notebook.getTurns",
+        "success": true,
+        "durationMs": 86,
+        "completedAt": "2026-10-30T17:58:21.115331"
+      },
+      {
+        "type": "operation",
+        "label": "notebook.getCitationPassage",
+        "success": true,
+        "durationMs": 54,
+        "completedAt": "2026-10-30T17:58:36.112028"
+      }
+    ],
+    "tail_flutter_logs": [
+      "  synchronized 3.4.2 (3.5.0 available)",
+      "  test 1.31.1 (1.33.0 available)",
+      "  test_api 0.7.12 (0.7.15 available)",
+      "  test_core 0.6.18 (0.6.21 available)",
+      "  vector_graphics 1.2.3 (1.2.5 available)",
+      "  vector_graphics_compiler 1.3.0 (1.3.4 available)",
+      "  vector_math 2.4.3 (2.4.4 available)",
+      "  vm_service 15.3.0 (15.4.0 available)",
+      "  web 1.1.1 (1.1.2 available)",
+      "  window_to_front 0.0.4 (1.0.0 available)",
+      "  xml 7.0.1 (7.1.0 available)",
+      "Got dependencies in `/Users/mac/Documents/Mobile_Dev/flutter_dev/poodle`!",
+      "54 packages have newer versions incompatible with dependency constraints.",
+      "Try `flutter pub outdated` for more information.",
+      "Launching lib/driver.dart on Web Server in debug mode...",
+      "lib/driver.dart is being served at http://localhost:57139",
+      "The web-server device requires the Dart Debug Chrome extension for debugging. Consider using the Chrome or Edge devices for an improved development workflow.",
+      "Debug service listening on ws://127.0.0.1:57413/Q-iabpwhsbs=/ws",
+      "A Dart VM Service on Web Server is available at: http://127.0.0.1:57413/Q-iabpwhsbs=",
+      "The Flutter DevTools debugger and profiler on Web Server is available at: http://127.0.0.1:57413/Q-iabpwhsbs=/devtools/?uri=ws://127.0.0.1:57413/Q-iabpwhsbs=/ws"
+    ]
+  }
+}

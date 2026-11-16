@@ -1,0 +1,19 @@
+### A short-lived, server-only proof to replace a Poodle account email.
+class: PendingEmailChange
+serverOnly: true
+table: poodle_pending_email_change
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  authUser: module:serverpod_auth_core:AuthUser?, relation(onDelete=Cascade)
+  requestedEmail: String
+  verificationCodeHash: String
+  credentialVersion: int
+  expiresAt: DateTime
+  resendAvailableAt: DateTime
+  verificationAttempts: int, default=0
+  locale: String, default='en'
+  createdAt: DateTime, defaultModel=now
+indexes:
+  poodle_pending_email_change_user_unique:
+    fields: authUserId
+    unique: true

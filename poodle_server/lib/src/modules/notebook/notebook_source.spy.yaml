@@ -1,0 +1,25 @@
+class: NotebookSourceRecord
+serverOnly: true
+table: poodle_notebook_source
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  courseId: UuidValue
+  notebookId: UuidValue?
+  ownerUserId: UuidValue?
+  activityId: UuidValue?
+  fileName: String
+  format: String
+  storageId: String
+  storagePath: String
+  status: String, default='queued'
+  currentVersion: int, default=0
+  failureCode: String?
+  createdAt: DateTime, default=now
+  updatedAt: DateTime, default=now
+indexes:
+  poodle_notebook_source_activity:
+    fields: activityId
+  poodle_notebook_source_owner:
+    fields: ownerUserId, courseId
+  poodle_notebook_source_status:
+    fields: status

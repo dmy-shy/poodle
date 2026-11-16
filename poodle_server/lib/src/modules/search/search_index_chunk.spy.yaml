@@ -1,0 +1,15 @@
+class: SearchIndexChunk
+serverOnly: true
+table: poodle_search_index_chunk
+fields:
+  job: SearchIndexJob?, relation(onDelete=Cascade)
+  ordinal: int
+  content: String
+  page: int?
+  location: String?
+  embeddingSpace: String
+  embedding: Vector(1536)?
+indexes:
+  poodle_search_chunk_unique:
+    fields: jobId, ordinal
+    unique: true

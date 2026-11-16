@@ -1,0 +1,6 @@
+class: CourseFileInfo
+fields:
+  fileName: String
+  mimeType: String
+  sizeBytes: int
+  checksum: String

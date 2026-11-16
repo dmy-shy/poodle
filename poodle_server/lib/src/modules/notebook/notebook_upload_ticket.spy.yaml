@@ -1,0 +1,6 @@
+# Short-lived private storage capability.
+class: NotebookUploadTicket
+fields:
+  sourceId: UuidValue
+  jobId: UuidValue
+  uploadDescription: String?

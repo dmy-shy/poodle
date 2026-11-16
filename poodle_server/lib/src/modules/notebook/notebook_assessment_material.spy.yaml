@@ -1,0 +1,12 @@
+class: NotebookAssessmentMaterialRecord
+serverOnly: true
+table: poodle_notebook_assessment_material
+fields:
+  id: UuidValue?, defaultPersist=random_v7
+  configId: UuidValue
+  activityId: UuidValue
+  sortOrder: int
+indexes:
+  poodle_notebook_material_unique:
+    fields: configId, activityId
+    unique: true

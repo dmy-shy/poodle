@@ -1,0 +1,5 @@
+class: SearchRecent
+fields:
+  id: int
+  query: String
+  lastUsed: DateTime

@@ -1,0 +1,12 @@
+class: NotebookStudioItem
+fields:
+  id: UuidValue
+  status: String, default='ready'
+  failureCode: String?
+  kind: String
+  language: String
+  title: String
+  contentJson: String
+  citations: List<NotebookCitation>
+  stale: bool
+  createdAt: DateTime

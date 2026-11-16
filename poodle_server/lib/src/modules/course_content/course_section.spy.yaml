@@ -1,0 +1,7 @@
+class: CourseSection
+fields:
+  id: UuidValue
+  title: String
+  description: String?
+  draft: bool
+  activities: List<CourseActivity>
