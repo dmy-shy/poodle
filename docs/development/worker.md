@@ -113,6 +113,17 @@ Routine tests use Serverpod's embedded PostgreSQL/pgvector and actual private
 database storage, with fake providers. No Docker, development API or live AI
 credential is needed. The bilingual original fixture is `test/fixtures/study.md`.
 
+The worker integration tests also run real PDF extraction, OCR, and audio
+processing. On Ubuntu, install the same tools used by GitHub Actions:
+
+```sh
+sudo apt-get update
+sudo apt-get install -y python3 poppler-utils tesseract-ocr tesseract-ocr-eng tesseract-ocr-ukr ffmpeg
+tesseract --list-langs
+```
+
+Confirm the language list includes both `eng` and `ukr` before running tests.
+
 The opt-in live test uses the same isolated database, real private seed bytes,
 OpenAI embeddings, JWT login and notebook HTTP endpoints. With the existing key
 exported locally, run from this folder:

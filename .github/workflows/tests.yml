@@ -25,11 +25,6 @@ jobs:
         id: dependencies
         run: flutter pub get --enforce-lockfile
 
-      - name: Install document extraction tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils tesseract-ocr-eng tesseract-ocr-uk ffmpeg
-
       - name: Flutter tests
         working-directory: poodle_flutter
         run: flutter test --no-pub --coverage
@@ -44,8 +39,31 @@ jobs:
         working-directory: poodle_server
         run: dart test --coverage=coverage
 
-      - name: Worker tests
+      - name: Install and verify worker tools
+        id: worker_tools
         if: ${{ !cancelled() && steps.dependencies.outcome == 'success' }}
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 poppler-utils tesseract-ocr tesseract-ocr-eng tesseract-ocr-ukr ffmpeg
+
+          for tool in python3 pdfinfo pdftotext pdftoppm tesseract ffmpeg ffprobe; do
+            if ! command -v "$tool" >/dev/null; then
+              echo "::error::Missing required worker command: $tool"
+              exit 1
+            fi
+          done
+
+          languages=$(tesseract --list-langs)
+          for language in eng ukr; do
+            if ! grep -Fxq "$language" <<< "$languages"; then
+              echo "::error::Missing required Tesseract language: $language"
+              exit 1
+            fi
+          done
+
+      - name: Worker tests
+        if: ${{ !cancelled() && steps.dependencies.outcome == 'success' && steps.worker_tools.outcome == 'success' }}
         working-directory: poodle_worker
         run: dart test --coverage=coverage
 
